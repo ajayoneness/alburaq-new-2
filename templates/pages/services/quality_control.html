@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}{% trans "Quality Control" %} - AL BURAQ GROUP{% endblock %}
+{% block meta_description %}{% trans "Rigorous quality inspection at every stage. Pre-shipment inspection, detailed reports and photo documentation from China." %}{% endblock %}
+
+{% block content %}
+
+<!-- Hero -->
+<section style="padding: 150px 0 80px; background: linear-gradient(180deg, #052e16 0%, var(--bg-dark) 100%);">
+    <div class="container text-center">
+        <div data-aos="zoom-in" style="margin-bottom: 2rem;">
+            <i class="fas fa-check-circle" style="font-size: 5rem; color: #34D399;"></i>
+        </div>
+        <h1 class="mb-md" data-aos="fade-up">{% trans "Quality" %} <span class="text-gold">{% trans "Control" %}</span></h1>
+        <p style="color: var(--text-secondary); max-width: 650px; margin: 0 auto;" data-aos="fade-up" data-aos-delay="100">
+            {% trans "Our quality control team inspects your products in China before shipment, ensuring every item meets your specifications." %}
+        </p>
+        <div class="flex justify-center gap-md mt-xl" style="flex-wrap: wrap;" data-aos="fade-up" data-aos-delay="200">
+            <a href="{% url 'pages:contact' %}" class="btn btn-primary"><i class="fas fa-envelope"></i> {% trans "Request Inspection" %}</a>
+            <a href="{% url 'pages:services' %}" class="btn btn-ghost"><i class="fas fa-th-large"></i> {% trans "All Services" %}</a>
+        </div>
+    </div>
+</section>
+
+<!-- Inspection Types -->
+<section class="section">
+    <div class="container">
+        <div class="text-center mb-2xl">
+            <h2 data-aos="fade-up">{% trans "Inspection" %} <span class="text-gold">{% trans "Types" %}</span></h2>
+        </div>
+        <div class="grid grid-cols-3 gap-xl">
+            <div class="card" style="padding: 2rem;" data-aos="fade-up">
+                <div style="width: 55px; height: 55px; background: linear-gradient(135deg, #059669, #34D399); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
+                    <i class="fas fa-industry" style="font-size: 1.3rem; color: white;"></i>
+                </div>
+                <h3 style="margin-bottom: 0.75rem;">{% trans "During Production" %}</h3>
+                <p style="color: var(--text-secondary);">{% trans "We visit the factory while production is ongoing to catch defects early and prevent costly reworks." %}</p>
+            </div>
+            <div class="card" style="padding: 2rem;" data-aos="fade-up" data-aos-delay="100">
+                <div style="width: 55px; height: 55px; background: linear-gradient(135deg, #D97706, var(--gold-light)); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
+                    <i class="fas fa-box-open" style="font-size: 1.3rem; color: white;"></i>
+                </div>
+                <h3 style="margin-bottom: 0.75rem;">{% trans "Pre-Shipment (PSI)" %}</h3>
+                <p style="color: var(--text-secondary);">{% trans "Final inspection when 80% of production is complete. We check quantity, quality and packaging before loading." %}</p>
+            </div>
+            <div class="card" style="padding: 2rem;" data-aos="fade-up" data-aos-delay="200">
+                <div style="width: 55px; height: 55px; background: linear-gradient(135deg, #1D4ED8, #60A5FA); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
+                    <i class="fas fa-warehouse" style="font-size: 1.3rem; color: white;"></i>
+                </div>
+                <h3 style="margin-bottom: 0.75rem;">{% trans "Container Loading Check" %}</h3>
+                <p style="color: var(--text-secondary);">{% trans "We monitor the loading process to ensure proper packing, accurate count and container condition." %}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What We Check -->
+<section class="section" style="background: var(--bg-darker);">
+    <div class="container">
+        <div class="grid gap-xl" style="grid-template-columns: 1fr 1fr; align-items: center;">
+            <div data-aos="fade-right">
+                <h2 class="mb-xl">{% trans "What Our Inspectors" %} <span class="text-gold">{% trans "Check" %}</span></h2>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem;"><i class="fas fa-check-circle" style="color: #34D399; margin-top: 0.2rem; flex-shrink: 0;"></i><span>{% trans "Product dimensions, weight and appearance vs your specifications" %}</span></li>
+                    <li style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem;"><i class="fas fa-check-circle" style="color: #34D399; margin-top: 0.2rem; flex-shrink: 0;"></i><span>{% trans "Material quality, color accuracy and finish" %}</span></li>
+                    <li style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem;"><i class="fas fa-check-circle" style="color: #34D399; margin-top: 0.2rem; flex-shrink: 0;"></i><span>{% trans "Functionality tests and safety checks" %}</span></li>
+                    <li style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem;"><i class="fas fa-check-circle" style="color: #34D399; margin-top: 0.2rem; flex-shrink: 0;"></i><span>{% trans "Labeling, barcodes and packaging integrity" %}</span></li>
+                    <li style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem;"><i class="fas fa-check-circle" style="color: #34D399; margin-top: 0.2rem; flex-shrink: 0;"></i><span>{% trans "Quantity count and carton marking" %}</span></li>
+                    <li style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem;"><i class="fas fa-check-circle" style="color: #34D399; margin-top: 0.2rem; flex-shrink: 0;"></i><span>{% trans "Defect classification: critical, major and minor" %}</span></li>
+                    <li style="display: flex; align-items: flex-start; gap: 1rem;"><i class="fas fa-check-circle" style="color: #34D399; margin-top: 0.2rem; flex-shrink: 0;"></i><span>{% trans "Accessories and spare parts included per unit" %}</span></li>
+                </ul>
+            </div>
+            <div data-aos="fade-left">
+                <div class="card" style="padding: 2.5rem;">
+                    <h3 style="color: var(--gold-light); margin-bottom: 1.5rem;"><i class="fas fa-file-alt" style="margin-left: 0.5rem;"></i> {% trans "Inspection Report Includes" %}</h3>
+                    <ul style="list-style: none; padding: 0; color: var(--text-secondary);">
+                        <li style="margin-bottom: 0.75rem;"><i class="fas fa-camera" style="color: var(--gold-light); margin-left: 0.5rem;"></i> {% trans "Hundreds of detailed photos" %}</li>
+                        <li style="margin-bottom: 0.75rem;"><i class="fas fa-chart-bar" style="color: var(--gold-light); margin-left: 0.5rem;"></i> {% trans "Statistical defect sampling (AQL standard)" %}</li>
+                        <li style="margin-bottom: 0.75rem;"><i class="fas fa-thumbs-up" style="color: var(--gold-light); margin-left: 0.5rem;"></i> {% trans "Pass / Fail / Conditional pass verdict" %}</li>
+                        <li style="margin-bottom: 0.75rem;"><i class="fas fa-clock" style="color: var(--gold-light); margin-left: 0.5rem;"></i> {% trans "Report delivered within 24 hours of inspection" %}</li>
+                        <li><i class="fas fa-globe" style="color: var(--gold-light); margin-left: 0.5rem;"></i> {% trans "Available in English and Arabic" %}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="section" style="background: var(--gold-gradient);">
+    <div class="container text-center">
+        <h2 style="color: var(--bg-dark);" data-aos="fade-up">{% trans "Protect Your Order with an Inspection" %}</h2>
+        <p style="color: var(--bg-dark); opacity: 0.8; margin-bottom: 2rem;" data-aos="fade-up" data-aos-delay="100">
+            {% trans "Don't ship blind. Let our QC team verify your goods before they leave China." %}
+        </p>
+        <div class="flex justify-center gap-md" style="flex-wrap: wrap;" data-aos="fade-up" data-aos-delay="200">
+            <a href="{% url 'pages:contact' %}" class="btn" style="background: var(--bg-dark); color: var(--gold-light);"><i class="fas fa-envelope"></i> {% trans "Request Inspection" %}</a>
+            <a href="https://wa.me/{{ COMPANY_WHATSAPP|slice:'1:' }}" class="btn" style="background: white; color: var(--bg-dark);"><i class="fab fa-whatsapp"></i> {% trans "Chat on WhatsApp" %}</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,155 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}{% trans "Sea Shipping" %} - AL BURAQ GROUP{% endblock %}
+{% block meta_description %}{% trans "Cost-effective ocean freight for bulk shipments from China. FCL and LCL options to major ports worldwide." %}{% endblock %}
+
+{% block content %}
+
+<!-- Hero -->
+<section style="padding: 150px 0 80px; background: linear-gradient(180deg, #0c2a2a 0%, var(--bg-dark) 100%);">
+    <div class="container text-center">
+        <div data-aos="zoom-in" style="margin-bottom: 2rem;">
+            <i class="fas fa-ship" style="font-size: 5rem; color: #2DD4BF;"></i>
+        </div>
+        <h1 class="mb-md" data-aos="fade-up">{% trans "Sea" %} <span class="text-gold">{% trans "Shipping" %}</span></h1>
+        <p style="color: var(--text-secondary); max-width: 650px; margin: 0 auto;" data-aos="fade-up" data-aos-delay="100">
+            {% trans "Cost-effective ocean freight solutions for large volume shipments. The best option when cost matters more than speed." %}
+        </p>
+        <div class="flex justify-center gap-md mt-xl" style="flex-wrap: wrap;" data-aos="fade-up" data-aos-delay="200">
+            <a href="{% url 'pages:contact' %}" class="btn btn-primary"><i class="fas fa-envelope"></i> {% trans "Get a Quote" %}</a>
+            <a href="{% url 'pages:services' %}" class="btn btn-ghost"><i class="fas fa-th-large"></i> {% trans "All Services" %}</a>
+        </div>
+    </div>
+</section>
+
+<!-- Shipping Options -->
+<section class="section">
+    <div class="container">
+        <div class="text-center mb-2xl">
+            <h2 data-aos="fade-up">{% trans "Shipping" %} <span class="text-gold">{% trans "Options" %}</span></h2>
+        </div>
+        <div class="grid gap-xl" style="grid-template-columns: 1fr 1fr;">
+            <!-- FCL -->
+            <div class="card" style="padding: 2.5rem;" data-aos="fade-up">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #0891B2, #2DD4BF); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        <i class="fas fa-cube" style="font-size: 1.5rem; color: white;"></i>
+                    </div>
+                    <h3>{% trans "FCL — Full Container Load" %}</h3>
+                </div>
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">{% trans "You rent an entire container exclusively for your cargo. Best for large shipments above 15 CBM." %}</p>
+                <ul style="color: var(--text-secondary); font-size: 0.9rem; list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.6rem;"><i class="fas fa-check" style="color: var(--gold-light); margin-left: 0.5rem;"></i> {% trans "Available sizes: 20ft, 40ft, 40HQ" %}</li>
+                    <li style="margin-bottom: 0.6rem;"><i class="fas fa-check" style="color: var(--gold-light); margin-left: 0.5rem;"></i> {% trans "Lower cost per cubic meter" %}</li>
+                    <li style="margin-bottom: 0.6rem;"><i class="fas fa-check" style="color: var(--gold-light); margin-left: 0.5rem;"></i> {% trans "Reduced handling and damage risk" %}</li>
+                    <li><i class="fas fa-check" style="color: var(--gold-light); margin-left: 0.5rem;"></i> {% trans "Fixed departure schedule" %}</li>
+                </ul>
+            </div>
+            <!-- LCL -->
+            <div class="card" style="padding: 2.5rem;" data-aos="fade-up" data-aos-delay="100">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #059669, #34D399); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        <i class="fas fa-cubes" style="font-size: 1.5rem; color: white;"></i>
+                    </div>
+                    <h3>{% trans "LCL — Less than Container Load" %}</h3>
+                </div>
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">{% trans "Share container space with other shippers. Ideal for small to medium shipments under 15 CBM." %}</p>
+                <ul style="color: var(--text-secondary); font-size: 0.9rem; list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.6rem;"><i class="fas fa-check" style="color: var(--gold-light); margin-left: 0.5rem;"></i> {% trans "You pay only for the space you use" %}</li>
+                    <li style="margin-bottom: 0.6rem;"><i class="fas fa-check" style="color: var(--gold-light); margin-left: 0.5rem;"></i> {% trans "Flexible for smaller cargo volumes" %}</li>
+                    <li style="margin-bottom: 0.6rem;"><i class="fas fa-check" style="color: var(--gold-light); margin-left: 0.5rem;"></i> {% trans "Frequent weekly departures" %}</li>
+                    <li><i class="fas fa-check" style="color: var(--gold-light); margin-left: 0.5rem;"></i> {% trans "Good for trial orders and samples" %}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Total Delivery Duration -->
+<section class="section" style="background: var(--bg-darker);">
+    <div class="container">
+        <div class="text-center mb-2xl">
+            <h2 data-aos="fade-up">{% trans "Estimated" %} <span class="text-gold">{% trans "Total Delivery Duration" %}</span></h2>
+            <p style="color: var(--text-secondary); margin-top: 0.75rem;" data-aos="fade-up" data-aos-delay="100">{% trans "Sea Freight (Total Duration)" %}</p>
+        </div>
+        <div class="grid grid-cols-3 gap-lg">
+            <div class="card" style="padding: 2rem; text-align: center;" data-aos="fade-up">
+                <i class="fas fa-globe-asia" style="font-size: 2rem; color: #2DD4BF; margin-bottom: 1rem;"></i>
+                <h4 style="color: var(--gold-light); margin-bottom: 0.5rem;">{% trans "Middle East" %}</h4>
+                <p style="font-size: 1.5rem; font-weight: 700; color: white; margin-bottom: 0.25rem;">35 – 60 {% trans "days" %}</p>
+                <p style="color: var(--text-secondary); font-size: 0.85rem;">{% trans "UAE, Saudi Arabia, Kuwait, Iraq..." %}</p>
+            </div>
+            <div class="card" style="padding: 2rem; text-align: center;" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-globe-africa" style="font-size: 2rem; color: var(--gold-light); margin-bottom: 1rem;"></i>
+                <h4 style="color: var(--gold-light); margin-bottom: 0.5rem;">{% trans "Africa" %}</h4>
+                <p style="font-size: 1.5rem; font-weight: 700; color: white; margin-bottom: 0.25rem;">40 – 70 {% trans "days" %}</p>
+                <p style="color: var(--text-secondary); font-size: 0.85rem;">{% trans "East, West, North and South Africa" %}</p>
+            </div>
+            <div class="card" style="padding: 2rem; text-align: center;" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-globe-europe" style="font-size: 2rem; color: #A78BFA; margin-bottom: 1rem;"></i>
+                <h4 style="color: var(--gold-light); margin-bottom: 0.5rem;">{% trans "Europe" %}</h4>
+                <p style="font-size: 1.5rem; font-weight: 700; color: white; margin-bottom: 0.25rem;">45 – 65 {% trans "days" %}</p>
+                <p style="color: var(--text-secondary); font-size: 0.85rem;">{% trans "UK, Germany, France, Italy, Spain..." %}</p>
+            </div>
+        </div>
+        <p style="color: var(--text-secondary); margin-top: 1.25rem; text-align: center;" data-aos="fade-up" data-aos-delay="250">
+            {% trans "These durations include cargo preparation, consolidation (LCL), booking, sailing time, and customs clearance." %}
+        </p>
+    </div>
+</section>
+
+<!-- Process -->
+<section class="section">
+    <div class="container">
+        <div class="text-center mb-2xl">
+            <h2 data-aos="fade-up">{% trans "Sea Shipping" %} <span class="text-gold">{% trans "Process" %}</span></h2>
+        </div>
+        <div class="grid grid-cols-4 gap-lg">
+            <div class="text-center" data-aos="fade-up">
+                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #0891B2, #2DD4BF); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                    <i class="fas fa-box" style="font-size: 1.5rem; color: white;"></i>
+                </div>
+                <h4 style="margin-bottom: 0.5rem;">{% trans "1. Cargo Ready" %}</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">{% trans "Goods are inspected, packed and consolidated at our warehouse in China." %}</p>
+            </div>
+            <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #059669, #34D399); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                    <i class="fas fa-file-invoice" style="font-size: 1.5rem; color: white;"></i>
+                </div>
+                <h4 style="margin-bottom: 0.5rem;">{% trans "2. Documentation" %}</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">{% trans "Bill of lading, packing list, commercial invoice and customs declaration prepared." %}</p>
+            </div>
+            <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #D97706, var(--gold-light)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                    <i class="fas fa-ship" style="font-size: 1.5rem; color: white;"></i>
+                </div>
+                <h4 style="margin-bottom: 0.5rem;">{% trans "3. Vessel Departure" %}</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">{% trans "Container loaded onto the vessel and shipment tracking number provided to you." %}</p>
+            </div>
+            <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #7C3AED, #A78BFA); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                    <i class="fas fa-anchor" style="font-size: 1.5rem; color: white;"></i>
+                </div>
+                <h4 style="margin-bottom: 0.5rem;">{% trans "4. Port Arrival" %}</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">{% trans "Cargo arrives at destination port, clears customs and is delivered to you." %}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="section" style="background: var(--gold-gradient);">
+    <div class="container text-center">
+        <h2 style="color: var(--bg-dark);" data-aos="fade-up">{% trans "Ready to Ship by Sea?" %}</h2>
+        <p style="color: var(--bg-dark); opacity: 0.8; margin-bottom: 2rem;" data-aos="fade-up" data-aos-delay="100">
+            {% trans "Tell us your cargo details and we will find the most competitive rate for you." %}
+        </p>
+        <div class="flex justify-center gap-md" style="flex-wrap: wrap;" data-aos="fade-up" data-aos-delay="200">
+            <a href="{% url 'pages:contact' %}" class="btn" style="background: var(--bg-dark); color: var(--gold-light);"><i class="fas fa-envelope"></i> {% trans "Get a Quote" %}</a>
+            <a href="https://wa.me/{{ COMPANY_WHATSAPP|slice:'1:' }}" class="btn" style="background: white; color: var(--bg-dark);"><i class="fab fa-whatsapp"></i> {% trans "Chat on WhatsApp" %}</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

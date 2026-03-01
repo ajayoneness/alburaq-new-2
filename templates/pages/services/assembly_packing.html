@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}{% trans "Assembly & Packing" %} - AL BURAQ GROUP{% endblock %}
+{% block meta_description %}{% trans "Professional packaging and assembly services. We consolidate products from multiple suppliers and pack to your requirements." %}{% endblock %}
+
+{% block content %}
+
+<!-- Hero -->
+<section style="padding: 150px 0 80px; background: linear-gradient(180deg, #2a1400 0%, var(--bg-dark) 100%);">
+    <div class="container text-center">
+        <div data-aos="zoom-in" style="margin-bottom: 2rem;">
+            <i class="fas fa-box" style="font-size: 5rem; color: #FBBF24;"></i>
+        </div>
+        <h1 class="mb-md" data-aos="fade-up">{% trans "Assembly &" %} <span class="text-gold">{% trans "Packing" %}</span></h1>
+        <p style="color: var(--text-secondary); max-width: 650px; margin: 0 auto;" data-aos="fade-up" data-aos-delay="100">
+            {% trans "We consolidate goods from multiple suppliers into one shipment, pack professionally and label according to your requirements." %}
+        </p>
+        <div class="flex justify-center gap-md mt-xl" style="flex-wrap: wrap;" data-aos="fade-up" data-aos-delay="200">
+            <a href="{% url 'pages:contact' %}" class="btn btn-primary"><i class="fas fa-envelope"></i> {% trans "Get a Quote" %}</a>
+            <a href="{% url 'pages:services' %}" class="btn btn-ghost"><i class="fas fa-th-large"></i> {% trans "All Services" %}</a>
+        </div>
+    </div>
+</section>
+
+<!-- Services Offered -->
+<section class="section">
+    <div class="container">
+        <div class="text-center mb-2xl">
+            <h2 data-aos="fade-up">{% trans "What's Included in Our" %} <span class="text-gold">{% trans "Packing Service" %}</span></h2>
+        </div>
+        <div class="grid grid-cols-3 gap-xl">
+            <div class="card" style="padding: 2rem; text-align: center;" data-aos="fade-up">
+                <i class="fas fa-layer-group" style="font-size: 2.5rem; color: #FBBF24; margin-bottom: 1rem;"></i>
+                <h3 style="margin-bottom: 0.75rem;">{% trans "Consolidation" %}</h3>
+                <p style="color: var(--text-secondary);">{% trans "We collect goods from multiple suppliers across China, combine them into a single shipment and save you money on freight." %}</p>
+            </div>
+            <div class="card" style="padding: 2rem; text-align: center;" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-paint-brush" style="font-size: 2.5rem; color: var(--gold-light); margin-bottom: 1rem;"></i>
+                <h3 style="margin-bottom: 0.75rem;">{% trans "Custom Packaging" %}</h3>
+                <p style="color: var(--text-secondary);">{% trans "Branded boxes, custom inserts, protective wrapping — we pack your products to match your brand identity." %}</p>
+            </div>
+            <div class="card" style="padding: 2rem; text-align: center;" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-tag" style="font-size: 2.5rem; color: #34D399; margin-bottom: 1rem;"></i>
+                <h3 style="margin-bottom: 0.75rem;">{% trans "Labeling & Barcodes" %}</h3>
+                <p style="color: var(--text-secondary);">{% trans "We apply your labels, SKU barcodes, Amazon FBA stickers or any custom labeling you require." %}</p>
+            </div>
+            <div class="card" style="padding: 2rem; text-align: center;" data-aos="fade-up">
+                <i class="fas fa-tools" style="font-size: 2.5rem; color: #60A5FA; margin-bottom: 1rem;"></i>
+                <h3 style="margin-bottom: 0.75rem;">{% trans "Light Assembly" %}</h3>
+                <p style="color: var(--text-secondary);">{% trans "Simple product assembly, kitting and bundling — combining multiple components into a ready-to-sell unit." %}</p>
+            </div>
+            <div class="card" style="padding: 2rem; text-align: center;" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-shield-alt" style="font-size: 2.5rem; color: #F472B6; margin-bottom: 1rem;"></i>
+                <h3 style="margin-bottom: 0.75rem;">{% trans "Export Packing" %}</h3>
+                <p style="color: var(--text-secondary);">{% trans "Reinforced cartons, foam padding and professional wrapping to protect goods during long-haul transport." %}</p>
+            </div>
+            <div class="card" style="padding: 2rem; text-align: center;" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-warehouse" style="font-size: 2.5rem; color: #A78BFA; margin-bottom: 1rem;"></i>
+                <h3 style="margin-bottom: 0.75rem;">{% trans "Warehousing" %}</h3>
+                <p style="color: var(--text-secondary);">{% trans "Short-term storage at our China warehouse while we collect all your goods before shipping them together." %}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Process -->
+<section class="section" style="background: var(--bg-darker);">
+    <div class="container">
+        <div class="text-center mb-2xl">
+            <h2 data-aos="fade-up">{% trans "How the Packing" %} <span class="text-gold">{% trans "Process Works" %}</span></h2>
+        </div>
+        <div class="grid grid-cols-4 gap-lg">
+            <div class="text-center" data-aos="fade-up">
+                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #D97706, #FBBF24); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                    <i class="fas fa-truck-loading" style="font-size: 1.5rem; color: white;"></i>
+                </div>
+                <h4 style="margin-bottom: 0.5rem;">{% trans "1. Goods Arrive" %}</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">{% trans "Products from your suppliers arrive at our China warehouse." %}</p>
+            </div>
+            <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #059669, #34D399); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                    <i class="fas fa-search" style="font-size: 1.5rem; color: white;"></i>
+                </div>
+                <h4 style="margin-bottom: 0.5rem;">{% trans "2. Verification" %}</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">{% trans "We check all items against your order and report any discrepancies." %}</p>
+            </div>
+            <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #1D4ED8, #60A5FA); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                    <i class="fas fa-box" style="font-size: 1.5rem; color: white;"></i>
+                </div>
+                <h4 style="margin-bottom: 0.5rem;">{% trans "3. Packing & Labeling" %}</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">{% trans "Items packed, labeled and consolidated per your instructions." %}</p>
+            </div>
+            <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #7C3AED, #A78BFA); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                    <i class="fas fa-plane" style="font-size: 1.5rem; color: white;"></i>
+                </div>
+                <h4 style="margin-bottom: 0.5rem;">{% trans "4. Shipment" %}</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">{% trans "The consolidated shipment is dispatched via your chosen transport method." %}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="section" style="background: var(--gold-gradient);">
+    <div class="container text-center">
+        <h2 style="color: var(--bg-dark);" data-aos="fade-up">{% trans "Need Professional Packing?" %}</h2>
+        <p style="color: var(--bg-dark); opacity: 0.8; margin-bottom: 2rem;" data-aos="fade-up" data-aos-delay="100">
+            {% trans "We handle all your packing and consolidation needs from our warehouse in China." %}
+        </p>
+        <div class="flex justify-center gap-md" style="flex-wrap: wrap;" data-aos="fade-up" data-aos-delay="200">
+            <a href="{% url 'pages:contact' %}" class="btn" style="background: var(--bg-dark); color: var(--gold-light);"><i class="fas fa-envelope"></i> {% trans "Get a Quote" %}</a>
+            <a href="https://wa.me/{{ COMPANY_WHATSAPP|slice:'1:' }}" class="btn" style="background: white; color: var(--bg-dark);"><i class="fab fa-whatsapp"></i> {% trans "Chat on WhatsApp" %}</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}{% trans "Documentation & Customs" %} - AL BURAQ GROUP{% endblock %}
+{% block meta_description %}{% trans "Complete customs clearance and documentation handling. We navigate complex import/export regulations so you don't have to." %}{% endblock %}
+
+{% block content %}
+
+<!-- Hero -->
+<section style="padding: 150px 0 80px; background: linear-gradient(180deg, #0f0a2a 0%, var(--bg-dark) 100%);">
+    <div class="container text-center">
+        <div data-aos="zoom-in" style="margin-bottom: 2rem;">
+            <i class="fas fa-file-alt" style="font-size: 5rem; color: #818CF8;"></i>
+        </div>
+        <h1 class="mb-md" data-aos="fade-up">{% trans "Documentation &" %} <span class="text-gold">{% trans "Customs" %}</span></h1>
+        <p style="color: var(--text-secondary); max-width: 650px; margin: 0 auto;" data-aos="fade-up" data-aos-delay="100">
+            {% trans "We handle all your import/export paperwork and customs clearance, ensuring a smooth and compliant flow of your goods." %}
+        </p>
+        <div class="flex justify-center gap-md mt-xl" style="flex-wrap: wrap;" data-aos="fade-up" data-aos-delay="200">
+            <a href="{% url 'pages:contact' %}" class="btn btn-primary"><i class="fas fa-envelope"></i> {% trans "Contact Us" %}</a>
+            <a href="{% url 'pages:services' %}" class="btn btn-ghost"><i class="fas fa-th-large"></i> {% trans "All Services" %}</a>
+        </div>
+    </div>
+</section>
+
+<!-- Documents We Handle -->
+<section class="section">
+    <div class="container">
+        <div class="text-center mb-2xl">
+            <h2 data-aos="fade-up">{% trans "Documents We" %} <span class="text-gold">{% trans "Handle" %}</span></h2>
+        </div>
+        <div class="grid grid-cols-3 gap-lg">
+            <div class="card" style="padding: 1.75rem;" data-aos="fade-up">
+                <i class="fas fa-file-invoice" style="font-size: 2rem; color: #818CF8; margin-bottom: 0.75rem;"></i>
+                <h4 style="margin-bottom: 0.5rem;">{% trans "Commercial Invoice" %}</h4>
+                <p style="color: var(--text-secondary); font-size: 0.88rem;">{% trans "Official invoice detailing goods, quantities, prices and transaction parties." %}</p>
+            </div>
+            <div class="card" style="padding: 1.75rem;" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-list-alt" style="font-size: 2rem; color: var(--gold-light); margin-bottom: 0.75rem;"></i>
+                <h4 style="margin-bottom: 0.5rem;">{% trans "Packing List" %}</h4>
+                <p style="color: var(--text-secondary); font-size: 0.88rem;">{% trans "Detailed breakdown of each carton contents, weights and dimensions." %}</p>
+            </div>
+            <div class="card" style="padding: 1.75rem;" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-ship" style="font-size: 2rem; color: #2DD4BF; margin-bottom: 0.75rem;"></i>
+                <h4 style="margin-bottom: 0.5rem;">{% trans "Bill of Lading (BL)" %}</h4>
+                <p style="color: var(--text-secondary); font-size: 0.88rem;">{% trans "Legal shipping document issued by the carrier for sea freight shipments." %}</p>
+            </div>
+            <div class="card" style="padding: 1.75rem;" data-aos="fade-up">
+                <i class="fas fa-certificate" style="font-size: 2rem; color: #34D399; margin-bottom: 0.75rem;"></i>
+                <h4 style="margin-bottom: 0.5rem;">{% trans "Certificate of Origin" %}</h4>
+                <p style="color: var(--text-secondary); font-size: 0.88rem;">{% trans "Official document certifying that goods were manufactured in China." %}</p>
+            </div>
+            <div class="card" style="padding: 1.75rem;" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-plane" style="font-size: 2rem; color: #60A5FA; margin-bottom: 0.75rem;"></i>
+                <h4 style="margin-bottom: 0.5rem;">{% trans "Air Waybill (AWB)" %}</h4>
+                <p style="color: var(--text-secondary); font-size: 0.88rem;">{% trans "Non-negotiable document for air freight shipments issued by the airline." %}</p>
+            </div>
+            <div class="card" style="padding: 1.75rem;" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-stamp" style="font-size: 2rem; color: #FB923C; margin-bottom: 0.75rem;"></i>
+                <h4 style="margin-bottom: 0.5rem;">{% trans "Customs Declaration" %}</h4>
+                <p style="color: var(--text-secondary); font-size: 0.88rem;">{% trans "Export and import customs declarations filed with Chinese and destination authorities." %}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Customs Process -->
+<section class="section" style="background: var(--bg-darker);">
+    <div class="container">
+        <div class="text-center mb-2xl">
+            <h2 data-aos="fade-up">{% trans "Customs Clearance" %} <span class="text-gold">{% trans "Process" %}</span></h2>
+        </div>
+        <div class="grid grid-cols-4 gap-lg">
+            <div class="text-center" data-aos="fade-up">
+                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #4F46E5, #818CF8); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                    <i class="fas fa-upload" style="font-size: 1.5rem; color: white;"></i>
+                </div>
+                <h4 style="margin-bottom: 0.5rem;">{% trans "1. Document Submission" %}</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">{% trans "We prepare and submit all required export documents to Chinese customs." %}</p>
+            </div>
+            <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #D97706, var(--gold-light)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                    <i class="fas fa-search" style="font-size: 1.5rem; color: white;"></i>
+                </div>
+                <h4 style="margin-bottom: 0.5rem;">{% trans "2. Customs Review" %}</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">{% trans "Authorities review documents and may inspect the shipment if required." %}</p>
+            </div>
+            <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #059669, #34D399); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                    <i class="fas fa-check-double" style="font-size: 1.5rem; color: white;"></i>
+                </div>
+                <h4 style="margin-bottom: 0.5rem;">{% trans "3. Clearance" %}</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">{% trans "Shipment receives clearance and is authorized to depart from China." %}</p>
+            </div>
+            <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, #1D4ED8, #60A5FA); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                    <i class="fas fa-home" style="font-size: 1.5rem; color: white;"></i>
+                </div>
+                <h4 style="margin-bottom: 0.5rem;">{% trans "4. Import Clearance" %}</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">{% trans "We coordinate with your local agent for smooth import clearance at destination." %}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why It Matters -->
+<section class="section">
+    <div class="container">
+        <div class="text-center mb-2xl">
+            <h2 data-aos="fade-up">{% trans "Why Proper Documentation" %} <span class="text-gold">{% trans "Matters" %}</span></h2>
+        </div>
+        <div class="grid grid-cols-3 gap-xl">
+            <div class="card" style="padding: 2rem; text-align: center;" data-aos="fade-up">
+                <i class="fas fa-clock" style="font-size: 2.5rem; color: var(--gold-light); margin-bottom: 1rem;"></i>
+                <h4 style="margin-bottom: 0.75rem;">{% trans "Avoid Delays" %}</h4>
+                <p style="color: var(--text-secondary);">{% trans "Incorrect or missing documents are the main cause of customs holds and shipment delays." %}</p>
+            </div>
+            <div class="card" style="padding: 2rem; text-align: center;" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-money-bill-wave" style="font-size: 2.5rem; color: #34D399; margin-bottom: 1rem;"></i>
+                <h4 style="margin-bottom: 0.75rem;">{% trans "Avoid Penalties" %}</h4>
+                <p style="color: var(--text-secondary);">{% trans "Compliance errors can result in heavy fines, seizure of goods or import bans." %}</p>
+            </div>
+            <div class="card" style="padding: 2rem; text-align: center;" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-lock" style="font-size: 2.5rem; color: #818CF8; margin-bottom: 1rem;"></i>
+                <h4 style="margin-bottom: 0.75rem;">{% trans "Full Compliance" %}</h4>
+                <p style="color: var(--text-secondary);">{% trans "We ensure your shipment fully complies with both Chinese export and destination import regulations." %}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="section" style="background: var(--gold-gradient);">
+    <div class="container text-center">
+        <h2 style="color: var(--bg-dark);" data-aos="fade-up">{% trans "Leave the Paperwork to Us" %}</h2>
+        <p style="color: var(--bg-dark); opacity: 0.8; margin-bottom: 2rem;" data-aos="fade-up" data-aos-delay="100">
+            {% trans "Our documentation experts will handle every form and clearance step for your shipment." %}
+        </p>
+        <div class="flex justify-center gap-md" style="flex-wrap: wrap;" data-aos="fade-up" data-aos-delay="200">
+            <a href="{% url 'pages:contact' %}" class="btn" style="background: var(--bg-dark); color: var(--gold-light);"><i class="fas fa-envelope"></i> {% trans "Contact Us" %}</a>
+            <a href="https://wa.me/{{ COMPANY_WHATSAPP|slice:'1:' }}" class="btn" style="background: white; color: var(--bg-dark);"><i class="fab fa-whatsapp"></i> {% trans "Chat on WhatsApp" %}</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

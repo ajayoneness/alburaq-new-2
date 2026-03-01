@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}{{ tip.title }} - AL BURAQ GROUP{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section style="padding: 150px 0 80px; background: linear-gradient(180deg, var(--bg-darker) 0%, var(--bg-dark) 100%); position: relative; overflow: hidden;">
+    <div class="container">
+        <div class="flex items-center gap-xl" style="flex-wrap: wrap;">
+            <div style="flex: 2; min-width: 300px;" data-aos="fade-right">
+                <h1 class="mb-lg">{{ tip.title }}</h1>
+                <p style="color: var(--text-secondary);">
+                    <i class="fas fa-calendar-alt" style="margin-left: 0.5rem;"></i>
+                    {{ tip.created_at|date:"d F Y" }}
+                </p>
+            </div>
+            {% if tip.image %}
+            <div style="flex: 1; min-width: 300px;" data-aos="fade-left">
+                <img src="{{ tip.image.url }}" alt="{{ tip.title }}" 
+                     style="width: 100%; border-radius: var(--radius-lg); box-shadow: 0 20px 60px rgba(0,0,0,0.3);">
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    <i class="fas fa-quote-right" 
+       style="position: absolute; left: -30px; bottom: -30px; font-size: 250px; opacity: 0.03; color: var(--gold-primary);"></i>
+</section>
+
+<!-- Tip Content -->
+<section class="section">
+    <div class="container">
+        <div class="card" style="padding: 4rem; max-width: 900px; margin: 0 auto;" data-aos="fade-up">
+            <div style="color: var(--text-primary); line-height: 2.2; font-size: 1.1rem; white-space: pre-line;">
+                {{ tip.content }}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Other Tips -->
+{% if other_tips %}
+<section class="section" style="background: var(--bg-darker);">
+    <div class="container">
+        <div class="text-center mb-2xl">
+            <h2 class="mb-md" data-aos="fade-up">{% trans "Other" %} <span class="text-gold">{% trans "Tips" %}</span></h2>
+        </div>
+
+        <div class="grid grid-cols-3 gap-lg">
+            {% for other_tip in other_tips %}
+            <a href="{% url 'pages:import_tip_detail' other_tip.slug %}" class="card" style="text-decoration: none; overflow: hidden;" 
+               data-aos="fade-up" data-aos-delay="{{ forloop.counter0 }}00">
+                {% if other_tip.image %}
+                <img src="{{ other_tip.image.url }}" alt="{{ other_tip.title }}" class="card-image">
+                {% else %}
+                <div class="card-image" style="background: linear-gradient(135deg, var(--teal) 0%, var(--teal-light) 100%); display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-lightbulb" style="font-size: 3rem; color: white;"></i>
+                </div>
+                {% endif %}
+                <div class="card-body">
+                    <h4 class="card-title">{{ other_tip.title }}</h4>
+                    <span class="badge badge-teal mt-md">
+                        <i class="fas fa-arrow-left"></i> {% trans "Read More" %}
+                    </span>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+
+        <div class="text-center mt-xl" data-aos="fade-up">
+            <a href="{% url 'pages:import_tips' %}" class="btn btn-secondary">
+                <i class="fas fa-list"></i> {% trans "All Tips" %}
+            </a>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Contact CTA -->
+<section class="section" style="background: var(--gold-gradient);">
+    <div class="container text-center">
+        <h2 style="color: var(--bg-dark);" data-aos="fade-up">{% trans "AL BURAQ – The Captain in China" %}</h2>
+        <p style="color: var(--bg-dark); opacity: 0.9; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;" data-aos="fade-up" data-aos-delay="100">
+            {% trans "Professional management, complete transparency, and peace of mind at every stage" %}
+        </p>
+        <a href="https://wa.me/{{ COMPANY_WHATSAPP|slice:'1:' }}" class="btn btn-lg" 
+           style="background: var(--bg-dark); color: var(--gold-light);" data-aos="fade-up" data-aos-delay="200">
+            <i class="fab fa-whatsapp"></i> {% trans "Contact Us Now" %}
+        </a>
+    </div>
+</section>
+{% endblock %}

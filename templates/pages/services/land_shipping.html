@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}{% trans "Land Shipping" %} - AL BURAQ GROUP{% endblock %}
+{% block meta_description %}{% trans "Rail and road freight from China to Central Asia, Middle East and Europe via Belt and Road routes." %}{% endblock %}
+
+{% block content %}
+
+<!-- Hero -->
+<section style="padding: 150px 0 80px; background: linear-gradient(180deg, #1e1040 0%, var(--bg-dark) 100%);">
+    <div class="container text-center">
+        <div data-aos="zoom-in" style="margin-bottom: 2rem;">
+            <i class="fas fa-train" style="font-size: 5rem; color: #A78BFA;"></i>
+        </div>
+        <h1 class="mb-md" data-aos="fade-up">{% trans "Land" %} <span class="text-gold">{% trans "Shipping" %}</span></h1>
+        <p style="color: var(--text-secondary); max-width: 650px; margin: 0 auto;" data-aos="fade-up" data-aos-delay="100">
+            {% trans "Rail and road freight connecting China to Central Asia, the Middle East and Europe via the Belt and Road Initiative routes." %}
+        </p>
+        <div class="flex justify-center gap-md mt-xl" style="flex-wrap: wrap;" data-aos="fade-up" data-aos-delay="200">
+            <a href="{% url 'pages:contact' %}" class="btn btn-primary"><i class="fas fa-envelope"></i> {% trans "Get a Quote" %}</a>
+            <a href="{% url 'pages:services' %}" class="btn btn-ghost"><i class="fas fa-th-large"></i> {% trans "All Services" %}</a>
+        </div>
+    </div>
+</section>
+
+<!-- Options -->
+<section class="section">
+    <div class="container">
+        <div class="text-center mb-2xl">
+            <h2 data-aos="fade-up">{% trans "Land Shipping" %} <span class="text-gold">{% trans "Options" %}</span></h2>
+        </div>
+        <div class="grid gap-xl" style="grid-template-columns: 1fr 1fr;">
+            <div class="card" style="padding: 2.5rem;" data-aos="fade-up">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #7C3AED, #A78BFA); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        <i class="fas fa-train" style="font-size: 1.5rem; color: white;"></i>
+                    </div>
+                    <h3>{% trans "China-Europe Express Train" %}</h3>
+                </div>
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">{% trans "Direct rail freight from China to Europe and Central Asia. Faster than sea and cheaper than air." %}</p>
+                <ul style="color: var(--text-secondary); font-size: 0.9rem; list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.6rem;"><i class="fas fa-check" style="color: var(--gold-light); margin-left: 0.5rem;"></i> {% trans "Total delivery duration: 25 – 35 days to Europe (Road)" %}</li>
+                    <li style="margin-bottom: 0.6rem;"><i class="fas fa-check" style="color: var(--gold-light); margin-left: 0.5rem;"></i> {% trans "Regular weekly departures" %}</li>
+                    <li style="margin-bottom: 0.6rem;"><i class="fas fa-check" style="color: var(--gold-light); margin-left: 0.5rem;"></i> {% trans "40HQ and 20ft containers available" %}</li>
+                    <li><i class="fas fa-check" style="color: var(--gold-light); margin-left: 0.5rem;"></i> {% trans "Suitable for large and heavy cargo" %}</li>
+                </ul>
+            </div>
+            <div class="card" style="padding: 2.5rem;" data-aos="fade-up" data-aos-delay="100">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                    <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #1D4ED8, #60A5FA); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                        <i class="fas fa-truck" style="font-size: 1.5rem; color: white;"></i>
+                    </div>
+                    <h3>{% trans "Road Freight (TIR Trucks)" %}</h3>
+                </div>
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">{% trans "Long-haul trucking via the Central Asian corridor. Ideal for door-to-door delivery in CIS and Middle East countries." %}</p>
+                <ul style="color: var(--text-secondary); font-size: 0.9rem; list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.6rem;"><i class="fas fa-check" style="color: var(--gold-light); margin-left: 0.5rem;"></i> {% trans "Total delivery duration: 15 – 25 days to Middle East" %}</li>
+                    <li style="margin-bottom: 0.6rem;"><i class="fas fa-check" style="color: var(--gold-light); margin-left: 0.5rem;"></i> {% trans "Door-to-door service available" %}</li>
+                    <li style="margin-bottom: 0.6rem;"><i class="fas fa-check" style="color: var(--gold-light); margin-left: 0.5rem;"></i> {% trans "Flexible pickup locations in China" %}</li>
+                    <li><i class="fas fa-check" style="color: var(--gold-light); margin-left: 0.5rem;"></i> {% trans "Good for Central Asia and Middle East" %}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Routes -->
+<section class="section" style="background: var(--bg-darker);">
+    <div class="container">
+        <div class="text-center mb-2xl">
+            <h2 data-aos="fade-up">{% trans "Key" %} <span class="text-gold">{% trans "Routes" %}</span></h2>
+            <p style="color: var(--text-secondary); margin-top: 0.75rem;" data-aos="fade-up" data-aos-delay="100">{% trans "Land Freight (Total Duration)" %}</p>
+        </div>
+        <div class="grid grid-cols-2 gap-lg">
+            <div class="card" style="padding: 2rem;" data-aos="fade-up">
+                <h4 style="color: var(--gold-light); margin-bottom: 1rem;"><i class="fas fa-route" style="margin-left: 0.5rem;"></i> {% trans "China → Middle East" %}</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">{% trans "Where applicable by road corridor and destination regulations" %}</p>
+                <p style="color: white; font-weight: 600; margin-top: 0.75rem;">15 – 25 {% trans "days" %}</p>
+            </div>
+            <div class="card" style="padding: 2rem;" data-aos="fade-up" data-aos-delay="100">
+                <h4 style="color: var(--gold-light); margin-bottom: 1rem;"><i class="fas fa-route" style="margin-left: 0.5rem;"></i> {% trans "China → Europe (Road)" %}</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">{% trans "Germany, Poland, Netherlands, Belgium, France, Spain, Italy..." %}</p>
+                <p style="color: white; font-weight: 600; margin-top: 0.75rem;">25 – 35 {% trans "days" %}</p>
+            </div>
+        </div>
+        <p style="color: var(--text-secondary); margin-top: 1.25rem; text-align: center;" data-aos="fade-up" data-aos-delay="200">
+            {% trans "These durations include border clearance and logistics processing." %}
+        </p>
+    </div>
+</section>
+
+<!-- Advantages -->
+<section class="section">
+    <div class="container">
+        <div class="text-center mb-2xl">
+            <h2 data-aos="fade-up">{% trans "Advantages of" %} <span class="text-gold">{% trans "Land Shipping" %}</span></h2>
+        </div>
+        <div class="grid grid-cols-3 gap-lg">
+            <div class="card" style="padding: 2rem; text-align: center;" data-aos="fade-up">
+                <i class="fas fa-balance-scale" style="font-size: 2.5rem; color: var(--gold-light); margin-bottom: 1rem;"></i>
+                <h4 style="margin-bottom: 0.75rem;">{% trans "Cost vs Speed Balance" %}</h4>
+                <p style="color: var(--text-secondary);">{% trans "Cheaper than air freight and faster than sea freight — the ideal middle ground." %}</p>
+            </div>
+            <div class="card" style="padding: 2rem; text-align: center;" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-leaf" style="font-size: 2.5rem; color: #34D399; margin-bottom: 1rem;"></i>
+                <h4 style="margin-bottom: 0.75rem;">{% trans "Eco-Friendly" %}</h4>
+                <p style="color: var(--text-secondary);">{% trans "Rail transport has a much lower carbon footprint compared to air freight." %}</p>
+            </div>
+            <div class="card" style="padding: 2rem; text-align: center;" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-weight-hanging" style="font-size: 2.5rem; color: #60A5FA; margin-bottom: 1rem;"></i>
+                <h4 style="margin-bottom: 0.75rem;">{% trans "Heavy Cargo Friendly" %}</h4>
+                <p style="color: var(--text-secondary);">{% trans "No weight restrictions that affect air freight pricing. Ideal for machinery and furniture." %}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="section" style="background: var(--gold-gradient);">
+    <div class="container text-center">
+        <h2 style="color: var(--bg-dark);" data-aos="fade-up">{% trans "Start Your Land Shipment Today" %}</h2>
+        <p style="color: var(--bg-dark); opacity: 0.8; margin-bottom: 2rem;" data-aos="fade-up" data-aos-delay="100">{% trans "Contact us to discuss the best land route for your cargo." %}</p>
+        <div class="flex justify-center gap-md" style="flex-wrap: wrap;" data-aos="fade-up" data-aos-delay="200">
+            <a href="{% url 'pages:contact' %}" class="btn" style="background: var(--bg-dark); color: var(--gold-light);"><i class="fas fa-envelope"></i> {% trans "Get a Quote" %}</a>
+            <a href="https://wa.me/{{ COMPANY_WHATSAPP|slice:'1:' }}" class="btn" style="background: white; color: var(--bg-dark);"><i class="fab fa-whatsapp"></i> {% trans "Chat on WhatsApp" %}</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

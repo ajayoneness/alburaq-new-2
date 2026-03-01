@@ -1,0 +1,153 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}{% trans "Sourcing & Purchasing" %} - AL BURAQ GROUP{% endblock %}
+{% block meta_description %}{% trans "Expert product sourcing from verified Chinese manufacturers. Factory verification, price negotiation and sample management." %}{% endblock %}
+
+{% block content %}
+
+<!-- Hero -->
+<section style="padding: 150px 0 80px; background: linear-gradient(180deg, #2a1a00 0%, var(--bg-dark) 100%);">
+    <div class="container text-center">
+        <div data-aos="zoom-in" style="margin-bottom: 2rem;">
+            <i class="fas fa-search-dollar" style="font-size: 5rem; color: var(--gold-light);"></i>
+        </div>
+        <h1 class="mb-md" data-aos="fade-up">{% trans "Sourcing &" %} <span class="text-gold">{% trans "Purchasing" %}</span></h1>
+        <p style="color: var(--text-secondary); max-width: 650px; margin: 0 auto;" data-aos="fade-up" data-aos-delay="100">
+            {% trans "We find the best verified suppliers in China, negotiate the best prices and manage your purchasing process from start to finish." %}
+        </p>
+        <div class="flex justify-center gap-md mt-xl" style="flex-wrap: wrap;" data-aos="fade-up" data-aos-delay="200">
+            <a href="{% url 'pages:contact' %}" class="btn btn-primary"><i class="fas fa-envelope"></i> {% trans "Start Sourcing" %}</a>
+            <a href="{% url 'pages:services' %}" class="btn btn-ghost"><i class="fas fa-th-large"></i> {% trans "All Services" %}</a>
+        </div>
+    </div>
+</section>
+
+<!-- Why Use Our Sourcing -->
+<section class="section">
+    <div class="container">
+        <div class="text-center mb-2xl">
+            <h2 data-aos="fade-up">{% trans "Why Source Through" %} <span class="text-gold">{% trans "AL BURAQ?" %}</span></h2>
+        </div>
+        <div class="grid grid-cols-3 gap-xl">
+            <div class="card" style="padding: 2rem; text-align: center;" data-aos="fade-up">
+                <i class="fas fa-factory" style="font-size: 2.5rem; color: var(--gold-light); margin-bottom: 1rem;"></i>
+                <h3 style="margin-bottom: 0.75rem;">{% trans "Verified Factories" %}</h3>
+                <p style="color: var(--text-secondary);">{% trans "We physically visit and audit factories to verify their legitimacy, production capacity and quality standards." %}</p>
+            </div>
+            <div class="card" style="padding: 2rem; text-align: center;" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-handshake" style="font-size: 2.5rem; color: #34D399; margin-bottom: 1rem;"></i>
+                <h3 style="margin-bottom: 0.75rem;">{% trans "Best Price Guaranteed" %}</h3>
+                <p style="color: var(--text-secondary);">{% trans "Our experienced negotiators speak Chinese fluently and know market prices, ensuring you get the best deal." %}</p>
+            </div>
+            <div class="card" style="padding: 2rem; text-align: center;" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-language" style="font-size: 2.5rem; color: #60A5FA; margin-bottom: 1rem;"></i>
+                <h3 style="margin-bottom: 0.75rem;">{% trans "No Language Barrier" %}</h3>
+                <p style="color: var(--text-secondary);">{% trans "We bridge the communication gap between you and Chinese suppliers, ensuring your requirements are clearly understood." %}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sourcing Process -->
+<section class="section" style="background: var(--bg-darker);">
+    <div class="container">
+        <div class="text-center mb-2xl">
+            <h2 data-aos="fade-up">{% trans "Our Sourcing" %} <span class="text-gold">{% trans "Process" %}</span></h2>
+        </div>
+        <div class="grid gap-xl" style="grid-template-columns: repeat(5, 1fr);">
+            <div class="text-center" data-aos="fade-up">
+                <div style="width: 65px; height: 65px; background: linear-gradient(135deg, #D97706, var(--gold-light)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                    <i class="fas fa-clipboard-check" style="font-size: 1.3rem; color: white;"></i>
+                </div>
+                <h5 style="margin-bottom: 0.4rem;">{% trans "1. Your Brief" %}</h5>
+                <p style="color: var(--text-secondary); font-size: 0.85rem;">{% trans "You describe the product, quantity and target price." %}</p>
+            </div>
+            <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                <div style="width: 65px; height: 65px; background: linear-gradient(135deg, #1D4ED8, #60A5FA); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                    <i class="fas fa-search" style="font-size: 1.3rem; color: white;"></i>
+                </div>
+                <h5 style="margin-bottom: 0.4rem;">{% trans "2. Supplier Search" %}</h5>
+                <p style="color: var(--text-secondary); font-size: 0.85rem;">{% trans "We identify and contact multiple qualified manufacturers." %}</p>
+            </div>
+            <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                <div style="width: 65px; height: 65px; background: linear-gradient(135deg, #059669, #34D399); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                    <i class="fas fa-file-invoice-dollar" style="font-size: 1.3rem; color: white;"></i>
+                </div>
+                <h5 style="margin-bottom: 0.4rem;">{% trans "3. Quotations" %}</h5>
+                <p style="color: var(--text-secondary); font-size: 0.85rem;">{% trans "We collect and compare multiple quotes on your behalf." %}</p>
+            </div>
+            <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+                <div style="width: 65px; height: 65px; background: linear-gradient(135deg, #7C3AED, #A78BFA); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                    <i class="fas fa-flask" style="font-size: 1.3rem; color: white;"></i>
+                </div>
+                <h5 style="margin-bottom: 0.4rem;">{% trans "4. Samples" %}</h5>
+                <p style="color: var(--text-secondary); font-size: 0.85rem;">{% trans "We order and inspect samples before you approve the order." %}</p>
+            </div>
+            <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                <div style="width: 65px; height: 65px; background: linear-gradient(135deg, #EC4899, #F472B6); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                    <i class="fas fa-shopping-cart" style="font-size: 1.3rem; color: white;"></i>
+                </div>
+                <h5 style="margin-bottom: 0.4rem;">{% trans "5. Order & Delivery" %}</h5>
+                <p style="color: var(--text-secondary); font-size: 0.85rem;">{% trans "We place the order, monitor production and arrange shipping." %}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What We Can Source -->
+<section class="section">
+    <div class="container">
+        <div class="text-center mb-2xl">
+            <h2 data-aos="fade-up">{% trans "What We Can" %} <span class="text-gold">{% trans "Source for You" %}</span></h2>
+        </div>
+        <div class="grid grid-cols-3 gap-lg">
+            <div class="card" style="padding: 1.75rem;" data-aos="fade-up">
+                <i class="fas fa-couch" style="font-size: 1.8rem; color: var(--gold-light); margin-bottom: 0.75rem;"></i>
+                <h4 style="margin-bottom: 0.4rem;">{% trans "Furniture & Home Decor" %}</h4>
+                <p style="color: var(--text-secondary); font-size: 0.88rem;">{% trans "Sofas, beds, tables, curtains, decorative items and more." %}</p>
+            </div>
+            <div class="card" style="padding: 1.75rem;" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-mobile-alt" style="font-size: 1.8rem; color: #60A5FA; margin-bottom: 0.75rem;"></i>
+                <h4 style="margin-bottom: 0.4rem;">{% trans "Electronics & Gadgets" %}</h4>
+                <p style="color: var(--text-secondary); font-size: 0.88rem;">{% trans "Consumer electronics, accessories and smart devices." %}</p>
+            </div>
+            <div class="card" style="padding: 1.75rem;" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-tshirt" style="font-size: 1.8rem; color: #F472B6; margin-bottom: 0.75rem;"></i>
+                <h4 style="margin-bottom: 0.4rem;">{% trans "Fashion & Clothing" %}</h4>
+                <p style="color: var(--text-secondary); font-size: 0.88rem;">{% trans "Garments, shoes, bags and fashion accessories." %}</p>
+            </div>
+            <div class="card" style="padding: 1.75rem;" data-aos="fade-up">
+                <i class="fas fa-cogs" style="font-size: 1.8rem; color: #A78BFA; margin-bottom: 0.75rem;"></i>
+                <h4 style="margin-bottom: 0.4rem;">{% trans "Industrial Equipment" %}</h4>
+                <p style="color: var(--text-secondary); font-size: 0.88rem;">{% trans "Machinery, tools, spare parts and industrial supplies." %}</p>
+            </div>
+            <div class="card" style="padding: 1.75rem;" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-baby" style="font-size: 1.8rem; color: #34D399; margin-bottom: 0.75rem;"></i>
+                <h4 style="margin-bottom: 0.4rem;">{% trans "Toys & Baby Products" %}</h4>
+                <p style="color: var(--text-secondary); font-size: 0.88rem;">{% trans "Educational toys, baby gear and children's products." %}</p>
+            </div>
+            <div class="card" style="padding: 1.75rem;" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-dumbbell" style="font-size: 1.8rem; color: #FB923C; margin-bottom: 0.75rem;"></i>
+                <h4 style="margin-bottom: 0.4rem;">{% trans "Sports & Fitness" %}</h4>
+                <p style="color: var(--text-secondary); font-size: 0.88rem;">{% trans "Gym equipment, outdoor gear and sports accessories." %}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="section" style="background: var(--gold-gradient);">
+    <div class="container text-center">
+        <h2 style="color: var(--bg-dark);" data-aos="fade-up">{% trans "Tell Us What You Need" %}</h2>
+        <p style="color: var(--bg-dark); opacity: 0.8; margin-bottom: 2rem;" data-aos="fade-up" data-aos-delay="100">
+            {% trans "Send us your product requirements and we will find the best supplier in China for you." %}
+        </p>
+        <div class="flex justify-center gap-md" style="flex-wrap: wrap;" data-aos="fade-up" data-aos-delay="200">
+            <a href="{% url 'pages:contact' %}" class="btn" style="background: var(--bg-dark); color: var(--gold-light);"><i class="fas fa-envelope"></i> {% trans "Start Sourcing" %}</a>
+            <a href="https://wa.me/{{ COMPANY_WHATSAPP|slice:'1:' }}" class="btn" style="background: white; color: var(--bg-dark);"><i class="fab fa-whatsapp"></i> {% trans "Chat on WhatsApp" %}</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

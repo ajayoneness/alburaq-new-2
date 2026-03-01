@@ -1,0 +1,163 @@
+{% extends 'base.html' %}
+{% load static i18n %}
+
+{% block title %}{% trans "How It Works" %} - AL BURAQ GROUP{% endblock %}
+{% block meta_description %}{% trans "A streamlined process from order to delivery. Learn how AL BURAQ GROUP manages every step of your import journey." %}{% endblock %}
+
+{% block content %}
+
+<!-- Hero -->
+<section style="padding: 150px 0 80px; background: linear-gradient(180deg, #2a0a1a 0%, var(--bg-dark) 100%);">
+    <div class="container text-center">
+        <div data-aos="zoom-in" style="margin-bottom: 2rem;">
+            <i class="fas fa-cogs" style="font-size: 5rem; color: #F472B6;"></i>
+        </div>
+        <h1 class="mb-md" data-aos="fade-up">{% trans "How It" %} <span class="text-gold">{% trans "Works" %}</span></h1>
+        <p style="color: var(--text-secondary); max-width: 650px; margin: 0 auto;" data-aos="fade-up" data-aos-delay="100">
+            {% trans "From your first inquiry to delivery at your door — here is exactly how AL BURAQ GROUP manages your import journey." %}
+        </p>
+        <div class="flex justify-center gap-md mt-xl" style="flex-wrap: wrap;" data-aos="fade-up" data-aos-delay="200">
+            <a href="{% url 'pages:contact' %}" class="btn btn-primary"><i class="fas fa-envelope"></i> {% trans "Start Now" %}</a>
+            <a href="{% url 'pages:services' %}" class="btn btn-ghost"><i class="fas fa-th-large"></i> {% trans "All Services" %}</a>
+        </div>
+    </div>
+</section>
+
+<!-- Full Step-by-Step Process -->
+<section class="section">
+    <div class="container" style="max-width: 900px;">
+        <div class="text-center mb-2xl">
+            <h2 data-aos="fade-up">{% trans "Your Import Journey" %} <span class="text-gold">{% trans "Step by Step" %}</span></h2>
+        </div>
+
+        <!-- Step 1 -->
+        <div class="card" style="padding: 2.5rem; margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1.5rem;" data-aos="fade-up">
+            <div style="width: 65px; height: 65px; background: linear-gradient(135deg, #EC4899, #F472B6); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <span style="color: white; font-size: 1.4rem; font-weight: 700;">1</span>
+            </div>
+            <div>
+                <h3 style="margin-bottom: 0.75rem; color: var(--gold-light);">{% trans "Contact Us & Share Your Requirements" %}</h3>
+                <p style="color: var(--text-secondary);">{% trans "Reach out via WhatsApp, email or our contact form. Share the product you need, the quantity, target price and any special requirements. Our team responds within a few hours." %}</p>
+            </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="card" style="padding: 2.5rem; margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1.5rem;" data-aos="fade-up">
+            <div style="width: 65px; height: 65px; background: linear-gradient(135deg, #D97706, var(--gold-light)); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <span style="color: white; font-size: 1.4rem; font-weight: 700;">2</span>
+            </div>
+            <div>
+                <h3 style="margin-bottom: 0.75rem; color: var(--gold-light);">{% trans "Sourcing & Quotation" %}</h3>
+                <p style="color: var(--text-secondary);">{% trans "We search our network of verified Chinese manufacturers and suppliers to find the best match for your product. We compare quotes and present you with the best options including price, quality level and delivery time." %}</p>
+            </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="card" style="padding: 2.5rem; margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1.5rem;" data-aos="fade-up">
+            <div style="width: 65px; height: 65px; background: linear-gradient(135deg, #059669, #34D399); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <span style="color: white; font-size: 1.4rem; font-weight: 700;">3</span>
+            </div>
+            <div>
+                <h3 style="margin-bottom: 0.75rem; color: var(--gold-light);">{% trans "Sample Approval (Optional)" %}</h3>
+                <p style="color: var(--text-secondary);">{% trans "For new products, we strongly recommend ordering a sample first. We arrange the sample, inspect it and ship it to you for approval. Only after your confirmation do we proceed with the bulk order." %}</p>
+            </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="card" style="padding: 2.5rem; margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1.5rem;" data-aos="fade-up">
+            <div style="width: 65px; height: 65px; background: linear-gradient(135deg, #1D4ED8, #60A5FA); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <span style="color: white; font-size: 1.4rem; font-weight: 700;">4</span>
+            </div>
+            <div>
+                <h3 style="margin-bottom: 0.75rem; color: var(--gold-light);">{% trans "Order Confirmation & Payment" %}</h3>
+                <p style="color: var(--text-secondary);">{% trans "Once you are satisfied with the product and price, we prepare the proforma invoice. You pay the supplier deposit and we place the order. We monitor the entire production process closely." %}</p>
+            </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="card" style="padding: 2.5rem; margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1.5rem;" data-aos="fade-up">
+            <div style="width: 65px; height: 65px; background: linear-gradient(135deg, #7C3AED, #A78BFA); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <span style="color: white; font-size: 1.4rem; font-weight: 700;">5</span>
+            </div>
+            <div>
+                <h3 style="margin-bottom: 0.75rem; color: var(--gold-light);">{% trans "Production & Quality Control" %}</h3>
+                <p style="color: var(--text-secondary);">{% trans "Our QC team visits the factory during and after production to inspect goods against your specifications. A detailed photo report is shared with you before the goods leave the factory." %}</p>
+            </div>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="card" style="padding: 2.5rem; margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1.5rem;" data-aos="fade-up">
+            <div style="width: 65px; height: 65px; background: linear-gradient(135deg, #0891B2, #2DD4BF); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <span style="color: white; font-size: 1.4rem; font-weight: 700;">6</span>
+            </div>
+            <div>
+                <h3 style="margin-bottom: 0.75rem; color: var(--gold-light);">{% trans "Packing, Consolidation & Dispatch" %}</h3>
+                <p style="color: var(--text-secondary);">{% trans "Goods are professionally packed, labeled and consolidated at our warehouse. If you have multiple suppliers, we combine everything into one shipment to save on freight costs." %}</p>
+            </div>
+        </div>
+
+        <!-- Step 7 -->
+        <div class="card" style="padding: 2.5rem; margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1.5rem;" data-aos="fade-up">
+            <div style="width: 65px; height: 65px; background: linear-gradient(135deg, #B45309, #FBBF24); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <span style="color: white; font-size: 1.4rem; font-weight: 700;">7</span>
+            </div>
+            <div>
+                <h3 style="margin-bottom: 0.75rem; color: var(--gold-light);">{% trans "Shipping & Documentation" %}</h3>
+                <p style="color: var(--text-secondary);">{% trans "We arrange shipping via air, sea or land — whichever suits your timeline and budget. All export documents are prepared and filed: commercial invoice, packing list, bill of lading or airway bill, certificate of origin." %}</p>
+            </div>
+        </div>
+
+        <!-- Step 8 -->
+        <div class="card" style="padding: 2.5rem; display: flex; align-items: flex-start; gap: 1.5rem;" data-aos="fade-up">
+            <div style="width: 65px; height: 65px; background: linear-gradient(135deg, #15803D, #34D399); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                <span style="color: white; font-size: 1.4rem; font-weight: 700;">8</span>
+            </div>
+            <div>
+                <h3 style="margin-bottom: 0.75rem; color: var(--gold-light);">{% trans "Delivery & After-Sales Support" %}</h3>
+                <p style="color: var(--text-secondary);">{% trans "Your goods arrive at their destination and we provide tracking updates throughout the journey. After delivery, our team remains available for any follow-up questions or issues." %}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="section" style="background: var(--bg-darker);">
+    <div class="container">
+        <div class="text-center mb-2xl">
+            <h2 data-aos="fade-up">{% trans "Why Businesses Choose" %} <span class="text-gold">{% trans "AL BURAQ" %}</span></h2>
+        </div>
+        <div class="grid grid-cols-3 gap-xl">
+            <div class="card" style="padding: 2rem; text-align: center;" data-aos="fade-up">
+                <i class="fas fa-users" style="font-size: 2.5rem; color: var(--gold-light); margin-bottom: 1rem;"></i>
+                <h4 style="margin-bottom: 0.75rem;">{% trans "Dedicated Team" %}</h4>
+                <p style="color: var(--text-secondary);">{% trans "A personal account manager handles your orders from start to finish — no handoffs, no confusion." %}</p>
+            </div>
+            <div class="card" style="padding: 2rem; text-align: center;" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-eye" style="font-size: 2.5rem; color: #34D399; margin-bottom: 1rem;"></i>
+                <h4 style="margin-bottom: 0.75rem;">{% trans "Full Transparency" %}</h4>
+                <p style="color: var(--text-secondary);">{% trans "We keep you updated at every stage. No surprises — you know exactly where your goods are at all times." %}</p>
+            </div>
+            <div class="card" style="padding: 2rem; text-align: center;" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-map-pin" style="font-size: 2.5rem; color: #60A5FA; margin-bottom: 1rem;"></i>
+                <h4 style="margin-bottom: 0.75rem;">{% trans "Based in China" %}</h4>
+                <p style="color: var(--text-secondary);">{% trans "Our team is physically present in China, giving us direct access to factories and the ability to act fast." %}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="section" style="background: var(--gold-gradient);">
+    <div class="container text-center">
+        <h2 style="color: var(--bg-dark);" data-aos="fade-up">{% trans "Ready to Get Started?" %}</h2>
+        <p style="color: var(--bg-dark); opacity: 0.8; margin-bottom: 2rem;" data-aos="fade-up" data-aos-delay="100">
+            {% trans "Send us your product requirements today and let us handle the rest." %}
+        </p>
+        <div class="flex justify-center gap-md" style="flex-wrap: wrap;" data-aos="fade-up" data-aos-delay="200">
+            <a href="{% url 'pages:contact' %}" class="btn" style="background: var(--bg-dark); color: var(--gold-light);"><i class="fas fa-envelope"></i> {% trans "Contact Us" %}</a>
+            <a href="https://wa.me/{{ COMPANY_WHATSAPP|slice:'1:' }}" class="btn" style="background: white; color: var(--bg-dark);"><i class="fab fa-whatsapp"></i> {% trans "Chat on WhatsApp" %}</a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
