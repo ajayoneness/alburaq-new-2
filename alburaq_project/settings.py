@@ -119,12 +119,6 @@ USE_TZ = True
 LANGUAGES = [
     ('ar', 'العربية'),
     ('en', 'English'),
-    ('fr', 'Français'),
-    ('zh-hans', '中文'),
-    ('tr', 'Türkçe'),
-    ('es', 'Español'),
-    ('it', 'Italiano'),
-    ('ru', 'Русский'),
 ]
 
 # RTL languages
@@ -139,12 +133,6 @@ PARLER_LANGUAGES = {
     None: (
         {'code': 'ar'},
         {'code': 'en'},
-        {'code': 'fr'},
-        {'code': 'zh-hans'},
-        {'code': 'tr'},
-        {'code': 'es'},
-        {'code': 'it'},
-        {'code': 'ru'},
     ),
     'default': {
         'fallback': 'ar',

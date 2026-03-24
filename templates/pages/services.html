@@ -7,7 +7,12 @@
 <!-- Hero Section -->
 <section style="padding: 150px 0 80px; background: linear-gradient(180deg, var(--bg-darker) 0%, var(--bg-dark) 100%);">
     <div class="container text-center">
-        <h1 class="mb-md" data-aos="fade-up">{% trans "Our" %} <span class="text-gold">{% trans "Services" %}</span>
+        <h1 class="mb-md" data-aos="fade-up">
+            {% if CURRENT_LANGUAGE == 'ar' %}
+            خدماتنا
+            {% else %}
+            Our Services
+            {% endif %}
         </h1>
         <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;" data-aos="fade-up"
             data-aos-delay="100">
@@ -27,7 +32,7 @@
                     <i class="fas fa-plane" style="font-size: 5rem; color: white; opacity: 0.9;"></i>
                 </div>
                 <div class="card-body">
-                    <h3 class="card-title">{% trans "Air Shipping" %}</h3>
+                    <h3 class="card-title">{% if CURRENT_LANGUAGE == 'ar' %}الشحن الجوي{% else %}Air Shipping{% endif %}</h3>
                     <p class="card-text mb-md">{% trans "Fast and reliable air freight services for time-sensitive shipments. Ideal for urgent orders and high-value goods that need quick delivery worldwide." %}
                     </p>
                     <ul style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.25rem;">
@@ -38,7 +43,10 @@
                         <li><i class="fas fa-check" style="color: var(--gold-light); margin-right: 0.5rem;"></i>
                             {% trans "Real-time tracking" %}</li>
                     </ul>
-                    <a href="{% url 'pages:service_air_shipping' %}" class="btn btn-secondary btn-sm">{% trans "Learn More" %} <i class="fas fa-arrow-right"></i></a>
+                    <a href="{% url 'pages:service_air_shipping' %}" class="btn btn-secondary btn-sm">
+                        {% if CURRENT_LANGUAGE == 'ar' %}اعرف أكثر{% else %}Learn More{% endif %}
+                        <i class="fas {% if CURRENT_LANGUAGE == 'ar' %}fa-arrow-left{% else %}fa-arrow-right{% endif %}"></i>
+                    </a>
                 </div>
             </div>
 
@@ -49,7 +57,7 @@
                     <i class="fas fa-ship" style="font-size: 5rem; color: white; opacity: 0.9;"></i>
                 </div>
                 <div class="card-body">
-                    <h3 class="card-title">{% trans "Sea Shipping" %}</h3>
+                    <h3 class="card-title">{% if CURRENT_LANGUAGE == 'ar' %}الشحن البحري{% else %}Sea Shipping{% endif %}</h3>
                     <p class="card-text mb-md">{% trans "Cost-effective ocean freight for bulk shipments. Perfect for large orders where time is flexible but cost efficiency is paramount." %}</p>
                     <ul style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.25rem;">
                         <li><i class="fas fa-check" style="color: var(--gold-light); margin-right: 0.5rem;"></i>
@@ -59,7 +67,10 @@
                         <li><i class="fas fa-check" style="color: var(--gold-light); margin-right: 0.5rem;"></i>
                             {% trans "Competitive rates" %}</li>
                     </ul>
-                    <a href="{% url 'pages:service_sea_shipping' %}" class="btn btn-secondary btn-sm">{% trans "Learn More" %} <i class="fas fa-arrow-right"></i></a>
+                    <a href="{% url 'pages:service_sea_shipping' %}" class="btn btn-secondary btn-sm">
+                        {% if CURRENT_LANGUAGE == 'ar' %}اعرف أكثر{% else %}Learn More{% endif %}
+                        <i class="fas {% if CURRENT_LANGUAGE == 'ar' %}fa-arrow-left{% else %}fa-arrow-right{% endif %}"></i>
+                    </a>
                 </div>
             </div>
 
@@ -70,7 +81,7 @@
                     <i class="fas fa-train" style="font-size: 5rem; color: white; opacity: 0.9;"></i>
                 </div>
                 <div class="card-body">
-                    <h3 class="card-title">{% trans "Land Shipping" %}</h3>
+                    <h3 class="card-title">{% if CURRENT_LANGUAGE == 'ar' %}الشحن البري{% else %}Land Shipping{% endif %}</h3>
                     <p class="card-text mb-md">{% trans "Rail and road freight connecting China to Central Asia, Middle East, and Europe via the Belt and Road routes." %}</p>
                     <ul style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.25rem;">
                         <li><i class="fas fa-check" style="color: var(--gold-light); margin-right: 0.5rem;"></i>
@@ -80,7 +91,10 @@
                         <li><i class="fas fa-check" style="color: var(--gold-light); margin-right: 0.5rem;"></i>
                             {% trans "Regular departures" %}</li>
                     </ul>
-                    <a href="{% url 'pages:service_land_shipping' %}" class="btn btn-secondary btn-sm">{% trans "Learn More" %} <i class="fas fa-arrow-right"></i></a>
+                    <a href="{% url 'pages:service_land_shipping' %}" class="btn btn-secondary btn-sm">
+                        {% if CURRENT_LANGUAGE == 'ar' %}اعرف أكثر{% else %}Learn More{% endif %}
+                        <i class="fas {% if CURRENT_LANGUAGE == 'ar' %}fa-arrow-left{% else %}fa-arrow-right{% endif %}"></i>
+                    </a>
                 </div>
             </div>
 
@@ -91,7 +105,7 @@
                     <i class="fas fa-search-dollar" style="font-size: 5rem; color: var(--bg-dark); opacity: 0.9;"></i>
                 </div>
                 <div class="card-body">
-                    <h3 class="card-title">{% trans "Sourcing & Purchasing" %}</h3>
+                    <h3 class="card-title">{% if CURRENT_LANGUAGE == 'ar' %}التوريد والشراء{% else %}Sourcing & Purchasing{% endif %}</h3>
                     <p class="card-text mb-md">{% trans "Expert product sourcing from verified Chinese manufacturers. We find the best suppliers and negotiate the best prices for you." %}</p>
                     <ul style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.25rem;">
                         <li><i class="fas fa-check" style="color: var(--gold-light); margin-right: 0.5rem;"></i>
@@ -101,7 +115,10 @@
                         <li><i class="fas fa-check" style="color: var(--gold-light); margin-right: 0.5rem;"></i>
                             {% trans "Sample management" %}</li>
                     </ul>
-                    <a href="{% url 'pages:service_sourcing' %}" class="btn btn-secondary btn-sm">{% trans "Learn More" %} <i class="fas fa-arrow-right"></i></a>
+                    <a href="{% url 'pages:service_sourcing' %}" class="btn btn-secondary btn-sm">
+                        {% if CURRENT_LANGUAGE == 'ar' %}اعرف أكثر{% else %}Learn More{% endif %}
+                        <i class="fas {% if CURRENT_LANGUAGE == 'ar' %}fa-arrow-left{% else %}fa-arrow-right{% endif %}"></i>
+                    </a>
                 </div>
             </div>
 
@@ -112,8 +129,14 @@
                     <i class="fas fa-check-circle" style="font-size: 5rem; color: white; opacity: 0.9;"></i>
                 </div>
                 <div class="card-body">
-                    <h3 class="card-title">{% trans "Quality Control" %}</h3>
-                    <p class="card-text mb-md">{% trans "Rigorous quality inspection at every stage. Our QC team ensures products meet your specifications before shipping." %}</p>
+                    <h3 class="card-title">{% if CURRENT_LANGUAGE == 'ar' %}مراقبة الجودة{% else %}Quality Control{% endif %}</h3>
+                    <p class="card-text mb-md">
+                        {% if CURRENT_LANGUAGE == 'ar' %}
+                        فحص دقيق للجودة في كل مرحلة. يضمن فريق مراقبة الجودة لدينا مطابقة المنتجات لمواصفاتكم قبل الشحن.
+                        {% else %}
+                        {% trans "Rigorous quality inspection at every stage. Our QC team ensures products meet your specifications before shipping." %}
+                        {% endif %}
+                    </p>
                     <ul style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.25rem;">
                         <li><i class="fas fa-check" style="color: var(--gold-light); margin-right: 0.5rem;"></i>
                             {% trans "Pre-shipment inspection" %}</li>
@@ -122,7 +145,10 @@
                         <li><i class="fas fa-check" style="color: var(--gold-light); margin-right: 0.5rem;"></i>
                             {% trans "Photo documentation" %}</li>
                     </ul>
-                    <a href="{% url 'pages:service_quality_control' %}" class="btn btn-secondary btn-sm">{% trans "Learn More" %} <i class="fas fa-arrow-right"></i></a>
+                    <a href="{% url 'pages:service_quality_control' %}" class="btn btn-secondary btn-sm">
+                        {% if CURRENT_LANGUAGE == 'ar' %}اعرف أكثر{% else %}Learn More{% endif %}
+                        <i class="fas {% if CURRENT_LANGUAGE == 'ar' %}fa-arrow-left{% else %}fa-arrow-right{% endif %}"></i>
+                    </a>
                 </div>
             </div>
 
@@ -133,7 +159,7 @@
                     <i class="fas fa-box" style="font-size: 5rem; color: white; opacity: 0.9;"></i>
                 </div>
                 <div class="card-body">
-                    <h3 class="card-title">{% trans "Assembly & Packing" %}</h3>
+                    <h3 class="card-title">{% if CURRENT_LANGUAGE == 'ar' %}التجميع والتغليف{% else %}Assembly & Packing{% endif %}</h3>
                     <p class="card-text mb-md">{% trans "Professional packaging and assembly services. We consolidate products from multiple suppliers and pack according to your requirements." %}</p>
                     <ul style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.25rem;">
                         <li><i class="fas fa-check" style="color: var(--gold-light); margin-right: 0.5rem;"></i>
@@ -143,7 +169,10 @@
                         <li><i class="fas fa-check" style="color: var(--gold-light); margin-right: 0.5rem;"></i>
                             {% trans "Consolidation" %}</li>
                     </ul>
-                    <a href="{% url 'pages:service_assembly_packing' %}" class="btn btn-secondary btn-sm">{% trans "Learn More" %} <i class="fas fa-arrow-right"></i></a>
+                    <a href="{% url 'pages:service_assembly_packing' %}" class="btn btn-secondary btn-sm">
+                        {% if CURRENT_LANGUAGE == 'ar' %}اعرف أكثر{% else %}Learn More{% endif %}
+                        <i class="fas {% if CURRENT_LANGUAGE == 'ar' %}fa-arrow-left{% else %}fa-arrow-right{% endif %}"></i>
+                    </a>
                 </div>
             </div>
 
@@ -154,7 +183,7 @@
                     <i class="fas fa-lightbulb" style="font-size: 5rem; color: white; opacity: 0.9;"></i>
                 </div>
                 <div class="card-body">
-                    <h3 class="card-title">{% trans "Import Tips & Experiences" %}</h3>
+                    <h3 class="card-title">{% if CURRENT_LANGUAGE == 'ar' %}نصائح وتجارب الاستيراد{% else %}Import Tips & Experiences{% endif %}</h3>
                     <p class="card-text mb-md">{% trans "Practical insights and real experiences to help you import smarter. Learn from our experts and avoid common mistakes." %}</p>
                     <ul style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.25rem;">
                         <li><i class="fas fa-check" style="color: var(--gold-light); margin-right: 0.5rem;"></i>
@@ -164,7 +193,10 @@
                         <li><i class="fas fa-check" style="color: var(--gold-light); margin-right: 0.5rem;"></i>
                             {% trans "Avoid common mistakes" %}</li>
                     </ul>
-                    <a href="{% url 'pages:import_tips' %}" class="btn btn-secondary btn-sm">{% trans "Learn More" %} <i class="fas fa-arrow-right"></i></a>
+                    <a href="{% url 'pages:import_tips' %}" class="btn btn-secondary btn-sm">
+                        {% if CURRENT_LANGUAGE == 'ar' %}اعرف أكثر{% else %}Learn More{% endif %}
+                        <i class="fas {% if CURRENT_LANGUAGE == 'ar' %}fa-arrow-left{% else %}fa-arrow-right{% endif %}"></i>
+                    </a>
                 </div>
             </div>
 
@@ -175,7 +207,7 @@
                     <i class="fas fa-cogs" style="font-size: 5rem; color: white; opacity: 0.9;"></i>
                 </div>
                 <div class="card-body">
-                    <h3 class="card-title">{% trans "How It Works" %}</h3>
+                    <h3 class="card-title">{% if CURRENT_LANGUAGE == 'ar' %}كيف نعمل{% else %}How It Works{% endif %}</h3>
                     <p class="card-text mb-md">{% trans "A streamlined process from order to delivery. We handle every step of your import journey with precision and care." %}</p>
                     <ul style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.25rem;">
                         <li><i class="fas fa-check" style="color: var(--gold-light); margin-right: 0.5rem;"></i>
@@ -185,7 +217,10 @@
                         <li><i class="fas fa-check" style="color: var(--gold-light); margin-right: 0.5rem;"></i>
                             {% trans "Dedicated support" %}</li>
                     </ul>
-                    <a href="{% url 'pages:service_how_it_works' %}" class="btn btn-secondary btn-sm">{% trans "Learn More" %} <i class="fas fa-arrow-right"></i></a>
+                    <a href="{% url 'pages:service_how_it_works' %}" class="btn btn-secondary btn-sm">
+                        {% if CURRENT_LANGUAGE == 'ar' %}اعرف أكثر{% else %}Learn More{% endif %}
+                        <i class="fas {% if CURRENT_LANGUAGE == 'ar' %}fa-arrow-left{% else %}fa-arrow-right{% endif %}"></i>
+                    </a>
                 </div>
             </div>
 
@@ -196,10 +231,11 @@
                     <i class="fas fa-trophy" style="font-size: 5rem; color: white; opacity: 0.9;"></i>
                 </div>
                 <div class="card-body">
-                    <h3 class="card-title">{% trans "Success Stories" %}</h3>
+                    <h3 class="card-title">{% if CURRENT_LANGUAGE == 'ar' %}قصص النجاح{% else %}Success Stories{% endif %}</h3>
                     <p class="card-text mb-md">{% trans "Join hundreds of satisfied clients who have grown their businesses with AL BURAQ GROUP. Our track record speaks for itself." %}</p>
                     <a href="{% url 'pages:success_stories' %}" class="btn btn-secondary btn-sm mt-md">
-                        {% trans "View Case Studies" %} <i class="fas fa-arrow-right"></i>
+                        {% if CURRENT_LANGUAGE == 'ar' %}عرض قصص النجاح{% else %}View Case Studies{% endif %}
+                        <i class="fas {% if CURRENT_LANGUAGE == 'ar' %}fa-arrow-left{% else %}fa-arrow-right{% endif %}"></i>
                     </a>
                 </div>
             </div>
@@ -212,7 +248,10 @@
                 <div class="card-body">
                     <h3 class="card-title">{{ service.display_title }}</h3>
                     <p class="card-text mb-md">{{ service.display_short_description|truncatewords:24 }}</p>
-                    <a href="{% url 'pages:service_detail' service.slug %}" class="btn btn-secondary btn-sm">{% trans "Learn More" %} <i class="fas fa-arrow-right"></i></a>
+                    <a href="{% url 'pages:service_detail' service.slug %}" class="btn btn-secondary btn-sm">
+                        {% if CURRENT_LANGUAGE == 'ar' %}اعرف أكثر{% else %}Learn More{% endif %}
+                        <i class="fas {% if CURRENT_LANGUAGE == 'ar' %}fa-arrow-left{% else %}fa-arrow-right{% endif %}"></i>
+                    </a>
                 </div>
             </div>
             {% endfor %}

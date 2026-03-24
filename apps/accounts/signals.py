@@ -8,7 +8,7 @@ from .models import UserProfile
 def create_user_profile(sender, instance, created, **kwargs):
     """Create UserProfile when User is created"""
     if created:
-        UserProfile.objects.create(user=instance)
+        UserProfile.objects.get_or_create(user=instance)
 
 
 @receiver(post_save, sender=User)

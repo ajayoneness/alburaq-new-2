@@ -7,9 +7,19 @@
 <!-- Hero Section -->
 <section style="padding: 150px 0 80px; background: linear-gradient(180deg, var(--bg-darker) 0%, var(--bg-dark) 100%);">
     <div class="container text-center">
-        <h1 class="mb-md" data-aos="fade-up">{% trans "Tips" %} <span class="text-gold">{% trans "and Import Experiences" %}</span></h1>
+        <h1 class="mb-md" data-aos="fade-up">
+            {% if CURRENT_LANGUAGE == 'ar' %}
+            نصائح وتجارب الاستيراد
+            {% else %}
+            Tips and Import Experiences
+            {% endif %}
+        </h1>
         <p style="color: var(--text-secondary); max-width: 700px; margin: 0 auto; line-height: 1.8;" data-aos="fade-up" data-aos-delay="100">
+            {% if CURRENT_LANGUAGE == 'ar' %}
+            عالم الاستيراد والتجارة الدولية مليء بالتفاصيل التي قد تبدو بسيطة، لكنها تؤثر بشكل مباشر على نجاح الشحنة وربحية المشروع.
+            {% else %}
             {% trans "The world of import and international trade is full of details that may seem simple but directly affect the success of the shipment and the profitability of the project" %}
+            {% endif %}
         </p>
     </div>
 </section>

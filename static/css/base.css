@@ -357,6 +357,27 @@ h6 { font-size: var(--text-lg); }
     object-fit: cover;
 }
 
+.product-image-frame {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--bg-card), var(--bg-darker));
+}
+
+.product-card-image-frame {
+    height: 200px;
+    padding: 1rem;
+}
+
+.product-card-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    object-position: center;
+}
+
 .card-title {
     font-size: var(--text-xl);
     margin-bottom: var(--space-sm);

@@ -38,10 +38,11 @@
             {% for product in products %}
             <div class="card" data-aos="fade-up" data-aos-delay="{{ forloop.counter0 }}25">
                 {% if product.get_main_image %}
-                <img src="{{ product.get_main_image.url }}" alt="{{ product.name }}" class="card-image">
+                <div class="product-image-frame product-card-image-frame">
+                    <img src="{{ product.get_main_image.url }}" alt="{{ product.name }}" class="product-card-image">
+                </div>
                 {% else %}
-                <div class="card-image"
-                    style="background: linear-gradient(135deg, var(--bg-card), var(--bg-darker)); display: flex; align-items: center; justify-content: center;">
+                <div class="product-image-frame product-card-image-frame">
                     <i class="fas fa-box" style="font-size: 3rem; color: var(--gold-primary); opacity: 0.5;"></i>
                 </div>
                 {% endif %}

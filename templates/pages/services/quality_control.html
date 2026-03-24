@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 {% load static i18n %}
 
-{% block title %}{% trans "Quality Control" %} - AL BURAQ GROUP{% endblock %}
-{% block meta_description %}{% trans "Rigorous quality inspection at every stage. Pre-shipment inspection, detailed reports and photo documentation from China." %}{% endblock %}
+{% block title %}{% if CURRENT_LANGUAGE == 'ar' %}مراقبة الجودة{% else %}{% trans "Quality Control" %}{% endif %} - AL BURAQ GROUP{% endblock %}
+{% block meta_description %}{% if CURRENT_LANGUAGE == 'ar' %}يقوم فريق مراقبة الجودة لدينا بفحص منتجاتك في الصين قبل الشحن، لضمان أن كل قطعة مطابقة لمواصفاتك ومعايير الجودة المطلوبة.{% else %}{% trans "Rigorous quality inspection at every stage. Pre-shipment inspection, detailed reports and photo documentation from China." %}{% endif %}{% endblock %}
 
 {% block content %}
 
@@ -12,13 +12,23 @@
         <div data-aos="zoom-in" style="margin-bottom: 2rem;">
             <i class="fas fa-check-circle" style="font-size: 5rem; color: #34D399;"></i>
         </div>
-        <h1 class="mb-md" data-aos="fade-up">{% trans "Quality" %} <span class="text-gold">{% trans "Control" %}</span></h1>
+        <h1 class="mb-md" data-aos="fade-up">
+            {% if CURRENT_LANGUAGE == 'ar' %}
+            مراقبة الجودة
+            {% else %}
+            {% trans "Quality" %} <span class="text-gold">{% trans "Control" %}</span>
+            {% endif %}
+        </h1>
         <p style="color: var(--text-secondary); max-width: 650px; margin: 0 auto;" data-aos="fade-up" data-aos-delay="100">
+            {% if CURRENT_LANGUAGE == 'ar' %}
+            يقوم فريق مراقبة الجودة لدينا بفحص منتجاتك في الصين قبل الشحن، لضمان أن كل قطعة مطابقة لمواصفاتك ومعايير الجودة المطلوبة.
+            {% else %}
             {% trans "Our quality control team inspects your products in China before shipment, ensuring every item meets your specifications." %}
+            {% endif %}
         </p>
         <div class="flex justify-center gap-md mt-xl" style="flex-wrap: wrap;" data-aos="fade-up" data-aos-delay="200">
-            <a href="{% url 'pages:contact' %}" class="btn btn-primary"><i class="fas fa-envelope"></i> {% trans "Request Inspection" %}</a>
-            <a href="{% url 'pages:services' %}" class="btn btn-ghost"><i class="fas fa-th-large"></i> {% trans "All Services" %}</a>
+            <a href="{% url 'pages:contact' %}" class="btn btn-primary"><i class="fas fa-envelope"></i> {% if CURRENT_LANGUAGE == 'ar' %}اطلب فحصاً{% else %}{% trans "Request Inspection" %}{% endif %}</a>
+            <a href="{% url 'pages:services' %}" class="btn btn-ghost"><i class="fas fa-th-large"></i> {% if CURRENT_LANGUAGE == 'ar' %}جميع الخدمات{% else %}{% trans "All Services" %}{% endif %}</a>
         </div>
     </div>
 </section>
@@ -27,29 +37,35 @@
 <section class="section">
     <div class="container">
         <div class="text-center mb-2xl">
-            <h2 data-aos="fade-up">{% trans "Inspection" %} <span class="text-gold">{% trans "Types" %}</span></h2>
+            <h2 data-aos="fade-up">
+                {% if CURRENT_LANGUAGE == 'ar' %}
+                أنواع الفحص
+                {% else %}
+                {% trans "Inspection" %} <span class="text-gold">{% trans "Types" %}</span>
+                {% endif %}
+            </h2>
         </div>
         <div class="grid grid-cols-3 gap-xl">
             <div class="card" style="padding: 2rem;" data-aos="fade-up">
                 <div style="width: 55px; height: 55px; background: linear-gradient(135deg, #059669, #34D399); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
                     <i class="fas fa-industry" style="font-size: 1.3rem; color: white;"></i>
                 </div>
-                <h3 style="margin-bottom: 0.75rem;">{% trans "During Production" %}</h3>
-                <p style="color: var(--text-secondary);">{% trans "We visit the factory while production is ongoing to catch defects early and prevent costly reworks." %}</p>
+                <h3 style="margin-bottom: 0.75rem;">{% if CURRENT_LANGUAGE == 'ar' %}أثناء الإنتاج{% else %}{% trans "During Production" %}{% endif %}</h3>
+                <p style="color: var(--text-secondary);">{% if CURRENT_LANGUAGE == 'ar' %}نزور المصنع أثناء سير الإنتاج لاكتشاف العيوب مبكراً وتفادي عمليات إعادة العمل المكلفة.{% else %}{% trans "We visit the factory while production is ongoing to catch defects early and prevent costly reworks." %}{% endif %}</p>
             </div>
             <div class="card" style="padding: 2rem;" data-aos="fade-up" data-aos-delay="100">
                 <div style="width: 55px; height: 55px; background: linear-gradient(135deg, #D97706, var(--gold-light)); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
                     <i class="fas fa-box-open" style="font-size: 1.3rem; color: white;"></i>
                 </div>
-                <h3 style="margin-bottom: 0.75rem;">{% trans "Pre-Shipment (PSI)" %}</h3>
-                <p style="color: var(--text-secondary);">{% trans "Final inspection when 80% of production is complete. We check quantity, quality and packaging before loading." %}</p>
+                <h3 style="margin-bottom: 0.75rem;">{% if CURRENT_LANGUAGE == 'ar' %}قبل الشحن (PSI){% else %}{% trans "Pre-Shipment (PSI)" %}{% endif %}</h3>
+                <p style="color: var(--text-secondary);">{% if CURRENT_LANGUAGE == 'ar' %}يتم إجراء الفحص النهائي عند اكتمال 80٪ من الإنتاج، حيث نقوم بالتأكد من الكمية والجودة والتغليف قبل عملية الشحن.{% else %}{% trans "Final inspection when 80% of production is complete. We check quantity, quality and packaging before loading." %}{% endif %}</p>
             </div>
             <div class="card" style="padding: 2rem;" data-aos="fade-up" data-aos-delay="200">
                 <div style="width: 55px; height: 55px; background: linear-gradient(135deg, #1D4ED8, #60A5FA); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
                     <i class="fas fa-warehouse" style="font-size: 1.3rem; color: white;"></i>
                 </div>
-                <h3 style="margin-bottom: 0.75rem;">{% trans "Container Loading Check" %}</h3>
-                <p style="color: var(--text-secondary);">{% trans "We monitor the loading process to ensure proper packing, accurate count and container condition." %}</p>
+                <h3 style="margin-bottom: 0.75rem;">{% if CURRENT_LANGUAGE == 'ar' %}فحص تحميل الحاوية{% else %}{% trans "Container Loading Check" %}{% endif %}</h3>
+                <p style="color: var(--text-secondary);">{% if CURRENT_LANGUAGE == 'ar' %}نراقب عملية التحميل لضمان سلامة التغليف، ودقة العدد، وحالة الحاوية قبل الإغلاق.{% else %}{% trans "We monitor the loading process to ensure proper packing, accurate count and container condition." %}{% endif %}</p>
             </div>
         </div>
     </div>
@@ -60,26 +76,26 @@
     <div class="container">
         <div class="grid gap-xl" style="grid-template-columns: 1fr 1fr; align-items: center;">
             <div data-aos="fade-right">
-                <h2 class="mb-xl">{% trans "What Our Inspectors" %} <span class="text-gold">{% trans "Check" %}</span></h2>
+                <h2 class="mb-xl">{% if CURRENT_LANGUAGE == 'ar' %}ما الذي يفحصه مفتشونا{% else %}{% trans "What Our Inspectors" %} <span class="text-gold">{% trans "Check" %}</span>{% endif %}</h2>
                 <ul style="list-style: none; padding: 0;">
-                    <li style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem;"><i class="fas fa-check-circle" style="color: #34D399; margin-top: 0.2rem; flex-shrink: 0;"></i><span>{% trans "Product dimensions, weight and appearance vs your specifications" %}</span></li>
-                    <li style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem;"><i class="fas fa-check-circle" style="color: #34D399; margin-top: 0.2rem; flex-shrink: 0;"></i><span>{% trans "Material quality, color accuracy and finish" %}</span></li>
-                    <li style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem;"><i class="fas fa-check-circle" style="color: #34D399; margin-top: 0.2rem; flex-shrink: 0;"></i><span>{% trans "Functionality tests and safety checks" %}</span></li>
-                    <li style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem;"><i class="fas fa-check-circle" style="color: #34D399; margin-top: 0.2rem; flex-shrink: 0;"></i><span>{% trans "Labeling, barcodes and packaging integrity" %}</span></li>
-                    <li style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem;"><i class="fas fa-check-circle" style="color: #34D399; margin-top: 0.2rem; flex-shrink: 0;"></i><span>{% trans "Quantity count and carton marking" %}</span></li>
-                    <li style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem;"><i class="fas fa-check-circle" style="color: #34D399; margin-top: 0.2rem; flex-shrink: 0;"></i><span>{% trans "Defect classification: critical, major and minor" %}</span></li>
-                    <li style="display: flex; align-items: flex-start; gap: 1rem;"><i class="fas fa-check-circle" style="color: #34D399; margin-top: 0.2rem; flex-shrink: 0;"></i><span>{% trans "Accessories and spare parts included per unit" %}</span></li>
+                    <li style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem;"><i class="fas fa-check-circle" style="color: #34D399; margin-top: 0.2rem; flex-shrink: 0;"></i><span>{% if CURRENT_LANGUAGE == 'ar' %}أبعاد المنتج ووزنه ومظهره مقارنة بمواصفاتكم{% else %}{% trans "Product dimensions, weight and appearance vs your specifications" %}{% endif %}</span></li>
+                    <li style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem;"><i class="fas fa-check-circle" style="color: #34D399; margin-top: 0.2rem; flex-shrink: 0;"></i><span>{% if CURRENT_LANGUAGE == 'ar' %}جودة المواد، ودقة اللون، وجودة التشطيب{% else %}{% trans "Material quality, color accuracy and finish" %}{% endif %}</span></li>
+                    <li style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem;"><i class="fas fa-check-circle" style="color: #34D399; margin-top: 0.2rem; flex-shrink: 0;"></i><span>{% if CURRENT_LANGUAGE == 'ar' %}اختبارات التشغيل وفحوصات السلامة{% else %}{% trans "Functionality tests and safety checks" %}{% endif %}</span></li>
+                    <li style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem;"><i class="fas fa-check-circle" style="color: #34D399; margin-top: 0.2rem; flex-shrink: 0;"></i><span>{% if CURRENT_LANGUAGE == 'ar' %}الملصقات والباركود وسلامة التغليف{% else %}{% trans "Labeling, barcodes and packaging integrity" %}{% endif %}</span></li>
+                    <li style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem;"><i class="fas fa-check-circle" style="color: #34D399; margin-top: 0.2rem; flex-shrink: 0;"></i><span>{% if CURRENT_LANGUAGE == 'ar' %}عدد القطع وعلامات الكراتين{% else %}{% trans "Quantity count and carton marking" %}{% endif %}</span></li>
+                    <li style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1rem;"><i class="fas fa-check-circle" style="color: #34D399; margin-top: 0.2rem; flex-shrink: 0;"></i><span>{% if CURRENT_LANGUAGE == 'ar' %}تصنيف العيوب: حرجة وكبيرة وصغيرة{% else %}{% trans "Defect classification: critical, major and minor" %}{% endif %}</span></li>
+                    <li style="display: flex; align-items: flex-start; gap: 1rem;"><i class="fas fa-check-circle" style="color: #34D399; margin-top: 0.2rem; flex-shrink: 0;"></i><span>{% if CURRENT_LANGUAGE == 'ar' %}الإكسسوارات وقطع الغيار المرفقة مع كل وحدة{% else %}{% trans "Accessories and spare parts included per unit" %}{% endif %}</span></li>
                 </ul>
             </div>
             <div data-aos="fade-left">
                 <div class="card" style="padding: 2.5rem;">
-                    <h3 style="color: var(--gold-light); margin-bottom: 1.5rem;"><i class="fas fa-file-alt" style="margin-left: 0.5rem;"></i> {% trans "Inspection Report Includes" %}</h3>
+                    <h3 style="color: var(--gold-light); margin-bottom: 1.5rem;"><i class="fas fa-file-alt" style="margin-left: 0.5rem;"></i> {% if CURRENT_LANGUAGE == 'ar' %}يتضمن تقرير الفحص{% else %}{% trans "Inspection Report Includes" %}{% endif %}</h3>
                     <ul style="list-style: none; padding: 0; color: var(--text-secondary);">
-                        <li style="margin-bottom: 0.75rem;"><i class="fas fa-camera" style="color: var(--gold-light); margin-left: 0.5rem;"></i> {% trans "Hundreds of detailed photos" %}</li>
-                        <li style="margin-bottom: 0.75rem;"><i class="fas fa-chart-bar" style="color: var(--gold-light); margin-left: 0.5rem;"></i> {% trans "Statistical defect sampling (AQL standard)" %}</li>
-                        <li style="margin-bottom: 0.75rem;"><i class="fas fa-thumbs-up" style="color: var(--gold-light); margin-left: 0.5rem;"></i> {% trans "Pass / Fail / Conditional pass verdict" %}</li>
-                        <li style="margin-bottom: 0.75rem;"><i class="fas fa-clock" style="color: var(--gold-light); margin-left: 0.5rem;"></i> {% trans "Report delivered within 24 hours of inspection" %}</li>
-                        <li><i class="fas fa-globe" style="color: var(--gold-light); margin-left: 0.5rem;"></i> {% trans "Available in English and Arabic" %}</li>
+                        <li style="margin-bottom: 0.75rem;"><i class="fas fa-camera" style="color: var(--gold-light); margin-left: 0.5rem;"></i> {% if CURRENT_LANGUAGE == 'ar' %}مئات الصور التفصيلية{% else %}{% trans "Hundreds of detailed photos" %}{% endif %}</li>
+                        <li style="margin-bottom: 0.75rem;"><i class="fas fa-chart-bar" style="color: var(--gold-light); margin-left: 0.5rem;"></i> {% if CURRENT_LANGUAGE == 'ar' %}عينات إحصائية للعيوب وفق معيار AQL{% else %}{% trans "Statistical defect sampling (AQL standard)" %}{% endif %}</li>
+                        <li style="margin-bottom: 0.75rem;"><i class="fas fa-thumbs-up" style="color: var(--gold-light); margin-left: 0.5rem;"></i> {% if CURRENT_LANGUAGE == 'ar' %}نتيجة نهائية: ناجح / راسب / ناجح بشروط{% else %}{% trans "Pass / Fail / Conditional pass verdict" %}{% endif %}</li>
+                        <li style="margin-bottom: 0.75rem;"><i class="fas fa-clock" style="color: var(--gold-light); margin-left: 0.5rem;"></i> {% if CURRENT_LANGUAGE == 'ar' %}تسليم التقرير خلال 24 ساعة من الفحص{% else %}{% trans "Report delivered within 24 hours of inspection" %}{% endif %}</li>
+                        <li><i class="fas fa-globe" style="color: var(--gold-light); margin-left: 0.5rem;"></i> {% if CURRENT_LANGUAGE == 'ar' %}متوفر باللغة العربية والإنجليزية{% else %}{% trans "Available in English and Arabic" %}{% endif %}</li>
                     </ul>
                 </div>
             </div>
@@ -90,13 +106,17 @@
 <!-- CTA -->
 <section class="section" style="background: var(--gold-gradient);">
     <div class="container text-center">
-        <h2 style="color: var(--bg-dark);" data-aos="fade-up">{% trans "Protect Your Order with an Inspection" %}</h2>
+        <h2 style="color: var(--bg-dark);" data-aos="fade-up">{% if CURRENT_LANGUAGE == 'ar' %}احمِ طلبك من خلال الفحص{% else %}{% trans "Protect Your Order with an Inspection" %}{% endif %}</h2>
         <p style="color: var(--bg-dark); opacity: 0.8; margin-bottom: 2rem;" data-aos="fade-up" data-aos-delay="100">
+            {% if CURRENT_LANGUAGE == 'ar' %}
+            لا تشحن بضاعتك دون تحقق. دع فريق مراقبة الجودة لدينا يفحص منتجاتك قبل مغادرتها الصين.
+            {% else %}
             {% trans "Don't ship blind. Let our QC team verify your goods before they leave China." %}
+            {% endif %}
         </p>
         <div class="flex justify-center gap-md" style="flex-wrap: wrap;" data-aos="fade-up" data-aos-delay="200">
-            <a href="{% url 'pages:contact' %}" class="btn" style="background: var(--bg-dark); color: var(--gold-light);"><i class="fas fa-envelope"></i> {% trans "Request Inspection" %}</a>
-            <a href="https://wa.me/{{ COMPANY_WHATSAPP|slice:'1:' }}" class="btn" style="background: white; color: var(--bg-dark);"><i class="fab fa-whatsapp"></i> {% trans "Chat on WhatsApp" %}</a>
+            <a href="{% url 'pages:contact' %}" class="btn" style="background: var(--bg-dark); color: var(--gold-light);"><i class="fas fa-envelope"></i> {% if CURRENT_LANGUAGE == 'ar' %}اطلب فحصاً{% else %}{% trans "Request Inspection" %}{% endif %}</a>
+            <a href="https://wa.me/{{ COMPANY_WHATSAPP|slice:'1:' }}" class="btn" style="background: white; color: var(--bg-dark);"><i class="fab fa-whatsapp"></i> {% if CURRENT_LANGUAGE == 'ar' %}تواصل عبر واتساب{% else %}{% trans "Chat on WhatsApp" %}{% endif %}</a>
         </div>
     </div>
 </section>
